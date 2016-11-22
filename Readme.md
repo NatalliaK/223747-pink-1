@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Наталья Косаковская](https://up.htmlacademy.ru/adaptive/9/user/223747).
-* Наставник: `Неизвестно`.
+* Наставник: [Вадим Белкин].
 
 ---
 
