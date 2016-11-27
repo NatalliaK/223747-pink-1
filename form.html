@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Конкурс</title>
@@ -31,65 +31,71 @@
       <p class="profile__1000-mile">Поделитесь своей историей и получите шанс выиграть ценный приз -- 1000 миль на вашу бонусную карту!
       </p>
     </div>
-    <form class="profile__form" action="/echo" method="post">
+    <form class="form" action="/echo" method="post">
       <div class="your-name">
         <h3 class="your-name__title  visually-hidden">Введите ваши данные</h3>
-        <label class="profile__label  profile__label--upp-red"> Фамилия:
-          <input type="text" name="surname" placeholder="Укажите вашу фамилию *" required>
-        </label>
-        <label class="profile__label  profile__label--upp-red" >Имя:
-          <input type="text" name="name" placeholder="Введите ваше имя *" required>
-        </label>
-        <label class="profile__label  profile__label--upp-red">Отчество:
-          <input type="text" name="patronymic" id="your-name__patronymic" placeholder="Ну и отчество тоже">
-        </label>
+        <fieldset class="field  field--name">
+          <label class="label  label--name"> Фамилия:
+            <input type="text" name="surname" placeholder="Укажите вашу фамилию *" required>
+          </label>
+          <label class="label  label--name" >Имя:
+            <input type="text" name="name" placeholder="Введите ваше имя *" required>
+          </label>
+          <label class="label  label--name">Отчество:
+            <input type="text" name="patronymic" id="your-name__patronymic" placeholder="Ну и отчество тоже">
+          </label>
+        </fieldset>
       </div>
       <div class="progress">
-        <h3 class="progress__title  progress__title--upp-red">Ваши безбашенные достижения в путешествии</h3>
-        <label class="progress__event  progress__event--check-text">
-          <input type="checkbox" name="progress-selfi" checked>Сделал селфи с акулой
-        </label>
-        <label class="progress__event  progress__event--check-text">
-          <input type="checkbox" name="progress-beach" checked>Обгорел на пляже
-        </label>
-        <label class="progress__event  progress__event--check-text">
-          <input type="checkbox" name="progress-chak">Видел Чака Норриса
-        </label>
-        <label class="progress__event  progress__event--check-text">
-          <input type="checkbox" name="progress-souvenir">Накупил сувениров
-        </label>
-        <label class="progress__event  progress__event--check-text">
-          <input type="checkbox" name="progress-tower" checked>Удержал башню
-        </label>
-        <label class="progress__event  progress__event--check-text">
-          <input type="checkbox" name="progress-hotel">Разгромил отель
-        </label>
+        <fieldset class="field  field--progress">
+          <legend class="legend  legend--progress">Ваши безбашенные достижения в путешествии</legend>
+          <label class="progress__event  progress__event--check-text">
+            <input type="checkbox" name="progress-selfi" checked>Сделал селфи с акулой
+          </label>
+          <label class="progress__event  progress__event--check-text">
+            <input type="checkbox" name="progress-beach" checked>Обгорел на пляже
+          </label>
+          <label class="progress__event  progress__event--check-text">
+            <input type="checkbox" name="progress-chak">Видел Чака Норриса
+          </label>
+          <label class="progress__event  progress__event--check-text">
+            <input type="checkbox" name="progress-souvenir">Накупил сувениров
+          </label>
+          <label class="progress__event  progress__event--check-text">
+            <input type="checkbox" name="progress-tower" checked>Удержал башню
+          </label>
+          <label class="progress__event  progress__event--check-text">
+            <input type="checkbox" name="progress-hotel">Разгромил отель
+          </label>
+        </fieldset>
       </div>
       <div class="your-contact">
-        <label class="your-contact__label  your-contact__label--upp-red">Номер телефона
-          <input type="tel" name="tel" placeholder="Номер, пожалуйста">
-        </label>
-        <label class="your-contact__label  your-contact__label--upp-red">Адресок почты
-          <input type="email" name="email" placeholder="Введите почту *" required>
-        </label>
+        <fieldset class="field  field--your-contact">
+          <label class="label  label--your-contact">Номер телефона
+            <input type="tel" name="tel" placeholder="Номер, пожалуйста">
+          </label>
+          <label class="label  label--your-contact">Адресок почты
+            <input type="email" name="email" placeholder="Введите почту *" required>
+          </label>
+        </fieldset>
       </div>
       <div class="application">
-        <fieldset class="application__field">
-          <legend class="application__title  application__title--upp-red">С каким приложением путешествовали?</legend>
-          <label class="application__ios  application__os  application__os--style">
+        <fieldset class="field  field--app">
+          <legend class="legend  legend--app">С каким приложением путешествовали?</legend>
+          <label class="label  label--os">
             <input type="radio" value="ios" checked>Pink для iOS
           </label>
-          <label class="application__android  application__os  application__os--style">
+          <label class="label  label--os">
             <input type="radio" value="andr">Pink для Android
           </label>
-          <label class="application__wp  application__os  application__os--style">
+          <label class="label  label--os">
             <input type="radio" value="wp">Windows Phone
           </label>
         </fieldset>
       </div>
       <div class="reply">
-        <fieldset class="reply__field">
-          <legend class="reply__write  reply__write--upp-red">Опишите свои эмоции</legend>
+        <fieldset class="field  field--reply">
+          <legend class="legend  legend--reply">Опишите свои эмоции</legend>
           <textarea name="reply-text" cols="10" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
       </div>
