@@ -27,92 +27,83 @@
     </div>
   </header>
   <main class="profile">
-    <div class="profile__text">
-      <p class="profile__1000-mile">Поделитесь своей историей и получите шанс выиграть ценный приз -- 1000 миль на вашу бонусную карту!
-      </p>
-    </div>
     <form class="form" action="/echo" method="post">
-      <div class="your-name">
-        <h3 class="your-name__title  visually-hidden">Введите ваши данные</h3>
-        <fieldset class="field  field--name">
-          <label class="label  label--name"> Фамилия:
-            <input type="text" name="surname" placeholder="Укажите вашу фамилию *" required>
-          </label>
-          <label class="label  label--name" >Имя:
-            <input type="text" name="name" placeholder="Введите ваше имя *" required>
-          </label>
-          <label class="label  label--name">Отчество:
-            <input type="text" name="patronymic" id="your-name__patronymic" placeholder="Ну и отчество тоже">
-          </label>
-        </fieldset>
-      </div>
-      <div class="progress">
-        <fieldset class="field  field--progress">
-          <legend class="legend  legend--progress">Ваши безбашенные достижения в путешествии</legend>
-          <label class="progress__event  progress__event--check-text">
-            <input type="checkbox" name="progress-selfi" checked>Сделал селфи с акулой
-          </label>
-          <label class="progress__event  progress__event--check-text">
-            <input type="checkbox" name="progress-beach" checked>Обгорел на пляже
-          </label>
-          <label class="progress__event  progress__event--check-text">
-            <input type="checkbox" name="progress-chak">Видел Чака Норриса
-          </label>
-          <label class="progress__event  progress__event--check-text">
-            <input type="checkbox" name="progress-souvenir">Накупил сувениров
-          </label>
-          <label class="progress__event  progress__event--check-text">
-            <input type="checkbox" name="progress-tower" checked>Удержал башню
-          </label>
-          <label class="progress__event  progress__event--check-text">
-            <input type="checkbox" name="progress-hotel">Разгромил отель
-          </label>
-        </fieldset>
-      </div>
-      <div class="your-contact">
-        <fieldset class="field  field--your-contact">
-          <label class="label  label--your-contact">Номер телефона
-            <input type="tel" name="tel" placeholder="Номер, пожалуйста">
-          </label>
-          <label class="label  label--your-contact">Адресок почты
-            <input type="email" name="email" placeholder="Введите почту *" required>
-          </label>
-        </fieldset>
-      </div>
-      <div class="application">
-        <fieldset class="field  field--app">
-          <legend class="legend  legend--app">С каким приложением путешествовали?</legend>
-          <label class="label  label--os">
-            <input type="radio" value="ios" checked>Pink для iOS
-          </label>
-          <label class="label  label--os">
-            <input type="radio" value="andr">Pink для Android
-          </label>
-          <label class="label  label--os">
-            <input type="radio" value="wp">Windows Phone
-          </label>
-        </fieldset>
-      </div>
-      <div class="reply">
-        <fieldset class="field  field--reply">
-          <legend class="legend  legend--reply">Опишите свои эмоции</legend>
-          <textarea name="reply-text" cols="10" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-        </fieldset>
+      <p class="form__desc">Поделитесь своей историей и получите шанс выиграть ценный приз -- 1000 миль на вашу бонусную карту!
+      </p>
+      <fieldset class="form__fieldset">
+        <label class="form__label"> Фамилия:
+          <input class="form__input input" type="text" name="surname" placeholder="Укажите вашу фамилию *" required>
+        </label>
+        <label class="form__label" >Имя:
+          <input class="form__input input" type="text" name="name" placeholder="Введите ваше имя *" required>
+        </label>
+        <label class="form__label">Отчество:
+          <input class="form__input input" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+        </label>
+      </fieldset>
+      <fieldset class="form__fieldset  form__fieldset--dark">
+        <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
+        <label class="form__label">
+          <input type="checkbox" name="selfi" checked>Сделал селфи с акулой
+        </label>
+        <label class="form__label">
+          <input class="form__check  check" type="checkbox" name="beach" checked>Обгорел на пляже
+        </label>
+        <label class="form__label">
+          <input class="form__check  check" type="checkbox" name="chak">Видел Чака Норриса
+        </label>
+        <label class="form__label">
+          <input class="form__check  check" type="checkbox" name="souvenir">Накупил сувениров
+        </label>
+        <label class="form__label">
+          <input class="form__check  check" type="checkbox" name="tower" checked>Удержал башню
+        </label>
+        <label class="form__label">
+          <input class="form__check  check" type="checkbox" name="hotel">Разгромил отель
+        </label>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <label class="form__label">Номер телефона
+          <input class="form__input input" type="tel" name="tel" placeholder="Номер, пожалуйста">
+        </label>
+        <label class="form__label">Адресок почты
+          <input class="form__input input" type="email" name="email" placeholder="Введите почту *" required>
+        </label>
+      </fieldset>
+      <fieldset class="form__fieldset  form__fieldset--dark">
+        <legend class="form__legend">С каким приложением путешествовали?</legend>
+        <label class="form__label">
+          <input class="form__radio  radio" type="radio" value="ios" checked>Pink для iOS
+        </label>
+        <label class="form__label">
+          <input class="form__radio  radio" type="radio" value="andr">Pink для Android
+        </label>
+        <label class="form__label">
+          <input class="form__radio  radio" type="radio" value="wp">Windows Phone
+        </label>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Опишите свои эмоции</legend>
+        <textarea class="form__textarea  textarea" name="textarea" cols="10" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+      </fieldset>
+      <div class="form__footer">
+        <button class="form__button btn" type="submit">Отправить форму</button>
+        <p class="form__desc-footer">*<span class="form__desc-footer--black"> --обязательные поля</span></p>
       </div>
     </form>
-    <button class="submit-form  submit-form--green  btn" type="submit">Отправить форму</button>
-    <div class="note">
-      <p class="note__note-text  note__note-text--red">*<span class="note__note-text--black"> --обязательные поля</span></p>
+    <div class="popup" hidden>
+      <h3 class="popup__title">Что-то пошло не так!</h3>
+      <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <div class="btn-bg">
+        <button class="popup__btn  btn" type="reset" value="ok">Ok</button>
+      </div>
     </div>
-    <div class="failure  hidden-block" hidden>
-      <h3 class="failure__title  hidden-block__title  hidden-block__title--style">Что-то пошло не так!</h3>
-      <p class="hidden-block__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="failure__reset  submit-form  submit-form--style-btn  btn" type="reset" value="ok">Ok</button>
-    </div>
-    <div class="ok  hidden-block" hidden>
-      <h3 class="ok__title  hidden-block__title  hidden-block__title--style">Ваша заявка отправлена</h3>
-      <p class="hidden-block__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-      <button class="ok__btn-ok  submit-form  submit-form--style-btn  btn" value="ok" type="button">Закрыть окно</button>
+    <div class="popup" hidden>
+      <h3 class="popup__title">Ваша заявка отправлена</h3>
+      <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+      <div class="btn-bg  btn-bg--dark">
+        <button class="popup__btn  btn" value="ok" type="button">Закрыть окно</button>
+      </div>
     </div>
   </main>
   <footer class="page-footer">
