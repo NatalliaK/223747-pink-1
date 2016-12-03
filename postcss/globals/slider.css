@@ -1,0 +1,8 @@
+.slider__toggles {
+  padding: 42px 0;
+@mixin align $cent;
+}
+
+.slider__toggle {
+  padding: 0 8px;
+}

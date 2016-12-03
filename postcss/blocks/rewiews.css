@@ -1,0 +1,7 @@
+.reviews {
+  @mixin line;
+}
+
+.reviews__wrapper {
+  padding-top: 10px;
+}

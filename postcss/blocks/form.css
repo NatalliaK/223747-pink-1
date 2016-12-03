@@ -1,0 +1,25 @@
+.form__desc {
+  padding: 54px 20px 52px;
+  line-height: 2;
+  @mixin line;
+  @mixin align $cent;
+}
+
+.form__fieldset {
+  border: none;
+  @mixin line;
+}
+
+.form__label {
+  @mixin cont;
+  @mixin upp;
+  color: $pink;
+}
+
+.form__input {
+  margin: 0 20px;
+  padding: 24px 0 24px 20px;
+  display: block;
+  width: 260px;
+  font-size: 18px;
+}

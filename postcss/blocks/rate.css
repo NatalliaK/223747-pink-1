@@ -1,0 +1,41 @@
+.rate__wrapper {
+  padding-top: 67px;
+  @mixin line;
+  @mixin bg-color $grey-bg;
+  @mixin upp;
+}
+
+.rate__table-row-head {
+  @mixin cont;
+  @mixin bg-color #283645;
+  color: $white;
+}
+
+.rate__table-cell-head {
+  padding: 10px 0;
+  @mixin align $cent;
+}
+
+.rate__title {
+  padding: 15px 0;
+  @mixin font-family $font-bold;
+  font-size: 18px;
+}
+
+.rate__table-row {
+  @mixin cont;
+  @mixin bg-color $white;
+}
+
+.rate__price {
+  padding-bottom: 15px;
+  @mixin font-family $font-light;
+  font-size: 24px;
+}
+
+.rate__table-cell {
+  margin-bottom: -1px;
+  padding: 23px 0 23px 23px;
+  border: 2px solid $grey-line;
+  border-collapse: collapse;
+}

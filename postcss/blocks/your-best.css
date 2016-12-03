@@ -1,0 +1,45 @@
+.your-best {
+  @mixin bg-color $grey-bg;
+}
+
+.your-best__wrapper {
+  @mixin cont;
+}
+
+.your-best__img {
+  padding: 20px 0 40px;
+  @mixin align $cent;
+}
+
+.your-best__icons {
+  @mixin align $cent;
+}
+
+.your-best__icon {
+  padding: 0 16px 38px;
+  border: none;
+}
+
+.your-best__range {
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.your-best__btn {
+  padding: 15px;
+  width: 100%;
+  border-width: 3px;
+  border-radius: 40px;
+  @mixin font-family $font-bold;
+  font-size: 18px;
+}
+
+.your-best__btn--red {
+  margin: 38px 0 15px;
+  border-color: $pink;
+  color: $pink;
+}
+
+.your-best__btn--grey {
+  margin-bottom: 42px;
+}

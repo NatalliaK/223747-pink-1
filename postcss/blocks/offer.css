@@ -1,0 +1,15 @@
+.offer {
+  @mixin line;
+}
+
+.offer-wrapper {
+  margin: 30px 0 20px;
+  @mixin cont;
+}
+
+.offer__review {
+  padding: 20px;
+  @mixin font-family $font-light;
+  font-size: 24px;
+  @mixin align $cent;
+}

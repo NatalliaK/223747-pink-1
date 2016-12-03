@@ -1,0 +1,70 @@
+.photo-owner {
+  @mixin line;
+}
+
+.photo-owner__image {
+  @mixin cont;
+}
+
+.photo-owner__image--big {
+  padding: 0;
+}
+
+.photo__title {
+  padding: 55px 20px;
+  @mixin line;
+  line-height: 2;
+  @mixin bg-color $white;
+  font-weight: normal;
+  @mixin align $cent;
+  font-size: 14px;
+}
+
+.photo-owner__comment {
+  margin: 0 20px 20px ;
+  @mixin cont;
+  @mixin bg-color $grey-bg;
+  line-height: 2;
+
+  &::last-child {
+  margin-bottom: 0;
+   }
+}
+
+/*Потом переделаю флексами*/
+
+.photo-owner--first {
+  position: relative;
+}
+
+.photo-owner__panorama {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0 20px;
+  padding: 13px 0;
+  width: 140px;
+  @mixin align $cent;
+  @mixin bg-color $pink;
+  color: $white;
+  @mixin upp;
+  @mixin font-family $font-bold;
+  font-size: 12px;
+}
+
+.photo-owner__name {
+  @mixin font-family $font-bold;
+}
+
+.photo-owner__time {
+  @mixin font-family $font-regular;
+  @mixin upp;
+  font-size: 12px;
+}
+
+.photo-owner__like {
+  border: none;
+  @mixin upp;
+  font-size: 12px;
+  color: $pink;
+}
