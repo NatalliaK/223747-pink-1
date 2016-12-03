@@ -1,10 +1,7 @@
 .offer {
-  @mixin line;
-}
-
-.offer-wrapper {
   margin: 30px 0 20px;
   @mixin cont;
+  @mixin line;
 }
 
 .offer__review {

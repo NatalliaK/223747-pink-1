@@ -5,6 +5,7 @@
 }
 
 .block-cell__review-bold {
+  margin-top: 10px;
   padding-top: 41px;
   @mixin font-family $font-bold;
   font-size: 18px;

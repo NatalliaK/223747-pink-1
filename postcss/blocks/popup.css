@@ -1,0 +1,27 @@
+.popup {
+  padding-bottom: 50px;
+  @mixin line;
+  @mixin align $cent;
+}
+
+.popup--grey {
+  @mixin bg-color $grey-bg;
+}
+
+.popup__title {
+  padding-top: 45px;
+  @mixin font-family $font-regular;
+  font-size: 18px;
+  @mixin bg-color $white;
+}
+
+.popup__text {
+  padding: 38px 20px 42px;
+  line-height: 2;
+  @mixin bg-color $white;
+}
+
+.popup__btn--grey-bg {
+  margin: 48px 20px 0;
+  width: 280px;
+}

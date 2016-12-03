@@ -1,8 +1,5 @@
 .footer-contacts {
   @mixin line;
-}
-
-.footer-contacts__wrapper {
   @mixin align $cent;
 }
 

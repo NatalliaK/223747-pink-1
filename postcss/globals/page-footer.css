@@ -1,0 +1,21 @@
+.page-footer {
+  @mixin cont;
+  @mixin line;
+  @mixin align $cent;
+}
+
+.page-footer__logo {
+  margin: 40px 0;
+}
+
+.page-footer__social {
+  margin-bottom: 40px;
+}
+
+.page-footer__copyright {
+  margin-bottom: 40px;
+}
+
+.page-footer__copyright-link {
+  padding-left: 25px;
+}

@@ -42,24 +42,24 @@
           <input class="form__input input" type="text" name="patronymic" placeholder="Ну и отчество тоже">
         </label>
       </fieldset>
-      <fieldset class="form__fieldset  form__fieldset--dark">
-        <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
-        <label class="form__label">
-          <input type="checkbox" name="selfi" checked>Сделал селфи с акулой
+      <fieldset class="form__fieldset  form__fieldset--grey">
+        <legend class="form__legend">Ваши безбашенные <br>достижения в путешествии</legend>
+        <label class="form__label  form__label--grey  form__label--check">
+          <input class="form__check  check" type="checkbox" name="selfi" checked>Сделал селфи с акулой
         </label>
-        <label class="form__label">
+        <label class="form__label  form__label--grey  form__label--check">
           <input class="form__check  check" type="checkbox" name="beach" checked>Обгорел на пляже
         </label>
-        <label class="form__label">
+        <label class="form__label  form__label--grey  form__label--check">
           <input class="form__check  check" type="checkbox" name="chak">Видел Чака Норриса
         </label>
-        <label class="form__label">
+        <label class="form__label  form__label--grey  form__label--check">
           <input class="form__check  check" type="checkbox" name="souvenir">Накупил сувениров
         </label>
-        <label class="form__label">
+        <label class="form__label  form__label--grey  form__label--check">
           <input class="form__check  check" type="checkbox" name="tower" checked>Удержал башню
         </label>
-        <label class="form__label">
+        <label class="form__label  form__label--grey  form__label--check">
           <input class="form__check  check" type="checkbox" name="hotel">Разгромил отель
         </label>
       </fieldset>
@@ -71,57 +71,53 @@
           <input class="form__input input" type="email" name="email" placeholder="Введите почту *" required>
         </label>
       </fieldset>
-      <fieldset class="form__fieldset  form__fieldset--dark">
+      <fieldset class="form__fieldset  form__fieldset--grey">
         <legend class="form__legend">С каким приложением путешествовали?</legend>
-        <label class="form__label">
+        <label class="form__label  form__label--grey  form__label--radio">
           <input class="form__radio  radio" type="radio" value="ios" checked>Pink для iOS
         </label>
-        <label class="form__label">
+        <label class="form__label  form__label--grey  form__label--radio">
           <input class="form__radio  radio" type="radio" value="andr">Pink для Android
         </label>
-        <label class="form__label">
+        <label class="form__label  form__label--grey  form__label--radio">
           <input class="form__radio  radio" type="radio" value="wp">Windows Phone
         </label>
       </fieldset>
       <fieldset class="form__fieldset">
-        <legend class="form__legend">Опишите свои эмоции</legend>
+        <legend class="form__legend  form__legend--textarea">Опишите свои эмоции</legend>
         <textarea class="form__textarea  textarea" name="textarea" cols="10" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
       </fieldset>
       <div class="form__footer">
-        <button class="form__button btn" type="submit">Отправить форму</button>
+        <button class="form__button  button-green  btn" type="submit">Отправить форму</button>
         <p class="form__desc-footer">*<span class="form__desc-footer--black"> --обязательные поля</span></p>
       </div>
     </form>
-    <div class="popup" hidden>
+    <div class="popup">
       <h3 class="popup__title">Что-то пошло не так!</h3>
       <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <div class="btn-bg">
-        <button class="popup__btn  btn" type="reset" value="ok">Ok</button>
+        <button class="popup__btn  button-green  btn" type="reset" value="ok">Ok</button>
       </div>
     </div>
-    <div class="popup" hidden>
+    <div class="popup  popup--grey">
       <h3 class="popup__title">Ваша заявка отправлена</h3>
       <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-      <div class="btn-bg  btn-bg--dark">
-        <button class="popup__btn  btn" value="ok" type="button">Закрыть окно</button>
-      </div>
+      <button class="popup__btn  popup__btn--grey-bg  button-green  btn" value="ok" type="button">Закрыть окно</button>
     </div>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <img class="page-footer__logo" src="./" alt="pink">
-      <p class="page-footer__social">
-          <span class="social-links">
-            <a class="social-link  social-link--tw" href="https://tw.com/htmlacademy" target="_blank">Мы в Твиттере</a>
-            <a class="social-link  social-link--fb" href="https://fb.com/htmlacademy" target="_blank">Мы в Фейсбуке</a>
-            <a class="social-link  social-link--anythere" href="https://anythere.com/htmlacademy" target="_blank">Мы где-то еще</a>
-          </span>
-      </p>
-      <p class="page-footer__copyright">
-        Разработано
-        <a class="btn  page-footer__copyright-link" href="https://htmlacademy.ru/"></a>
-      </p>
-    </div>
+    <img class="page-footer__logo" src="/img/logo-pink-blue-mobile.svg" alt="pink" width="160" height="45">
+    <p class="page-footer__social">
+            <span class="social-links">
+              <a class="social-link  social-link--tw" href="https://tw.com/htmlacademy" target="_blank"><img src="/img/icon-twitter.svg" alt="twitter" width="20" height="20"></a>
+              <a class="social-link  social-link--fb" href="https://fb.com/htmlacademy" target="_blank"><img src="/img/icon-facebook.svg" alt="facebook" width="20" height="20"></a>
+              <a class="social-link  social-link--anythere" href="https://anythere.com/htmlacademy" target="_blank"><img src="/img/icon-youtube.svg" alt="youtube" width="20" height="20"></a>
+            </span>
+    </p>
+    <p class="page-footer__copyright">
+      Разработано
+      <a class="page-footer__copyright-link  btn" href="https://htmlacademy.ru/"><img class="page-footer__copyright-img" src="img/logo-htmlacademy.svg"></a>
+    </p>
   </footer>
 </div>
 </body>

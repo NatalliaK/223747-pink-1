@@ -7,6 +7,8 @@
 @import "globals/main-nav.css";
 @import "globals/page-header.css";
 @import "globals/slider.css";
+@import "globals/page-footer.css";
+@import "globals/social-links.css";
 @import "blocks/page-header.css";
 @import "blocks/download-app.css";
 @import "blocks/offer.css";
@@ -18,4 +20,5 @@
 @import "blocks/photo.css";
 @import "blocks/your-best.css";
 @import "blocks/form.css";
-
+@import "blocks/button-green.css";
+@import "blocks/popup.css";

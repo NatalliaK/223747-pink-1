@@ -28,7 +28,7 @@
 .your-best__btn {
   padding: 15px;
   width: 100%;
-  border-width: 3px;
+  border: 3px solid;
   border-radius: 40px;
   @mixin font-family $font-bold;
   font-size: 18px;
@@ -42,4 +42,6 @@
 
 .your-best__btn--grey {
   margin-bottom: 42px;
+  border-color: $grey-btn;
+  color: $grey-btn;
 }

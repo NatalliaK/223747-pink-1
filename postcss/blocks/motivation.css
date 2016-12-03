@@ -1,5 +1,4 @@
-.motivation__wrapper {
-  padding-top: 14px;
+.motivation {
   @mixin bg-color $grey-bg;
 }
 
