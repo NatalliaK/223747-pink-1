@@ -25,10 +25,9 @@
   @mixin cont;
   @mixin bg-color $grey-bg;
   line-height: 2;
-
   &::last-child {
   margin-bottom: 0;
-   }
+  }
 }
 
 /*Потом переделаю флексами*/
