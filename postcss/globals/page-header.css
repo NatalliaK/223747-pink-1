@@ -1,0 +1,31 @@
+.page-header__top-block {
+  position: relative;
+  @mixin cont;
+  height: 70px;
+  line-height: 70px;
+  border: 1px solid #485461;
+  box-shadow: inset 0 -1px 0 0 $black;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.page-header__bg {
+  width: auto;
+}
+
+.page-header__title {
+  padding-top: 35px;
+  @mixin font-family $font-light;
+  font-size: 24px;
+  @mixin align $cent;
+  vertical-align: middle;
+  color: $white;
+}

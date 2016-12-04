@@ -1,0 +1,21 @@
+.block-cell {
+  @mixin cont;
+  @mixin align $cent;
+  @mixin line;
+}
+
+.block-cell__review-bold {
+  margin-top: 10px;
+  padding-top: 41px;
+  @mixin font-family $font-bold;
+  font-size: 18px;
+}
+
+.block-cell__review {
+  padding-top: 24px;
+  line-height: 2;
+}
+
+.block-cell__review--padding {
+  padding-top: 30px;
+}

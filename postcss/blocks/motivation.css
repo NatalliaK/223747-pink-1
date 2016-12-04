@@ -1,0 +1,10 @@
+.motivation {
+  @mixin bg-color $grey-bg;
+}
+
+.motivation__phone {
+  margin-top: 47px;
+  height: 280px;
+  overflow: hidden;
+  @mixin align $cent;
+}

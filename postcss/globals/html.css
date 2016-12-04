@@ -1,0 +1,5 @@
+html {
+  min-width: 320px;
+  font-size: 14px;
+  @mixin font-family $font-regular;
+}

@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
   <div class="wrapper">
     <header class="page-header">
-      <h1 class="page-header__logo  visually-hidden">Pink</h1>
+      <h1 class="page-header__title  visually-hidden">Pink</h1>
       <nav class="main-nav  main-nav--closed  main-nav--no-js">
-        <div class="page-header__logo">
-          <img src="./" width="120" height="70" alt="PINK">
+        <div class="page-header__top-block">
+          <img src="/img/logo-pink-white-mobile.svg" width="75" height="25" alt="PINK">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
         </div>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a>Главная</a></li>
@@ -22,73 +23,51 @@
           </ul>
         </div>
       </nav>
-      <div class="page-header__bg  page-header__bg-index"></div>
+      <div class="page-header__bg  page-header__bg--index"></div>
     </header>
     <section class="download-app">
-      <div class="download-app__wrapper">
-        <h3 class="download-app__title  visually-hidden">Скачать приложение</h3>
-        <p class="download-app__text-look">Взгляните на жизнь иначе!</p>
-        <a class="download-app__link" href="">Скачать приложение</a>
-        <ul class="download-app__os">
-          <li class="download-app__apple-img"><img src="./" width="47" height="56" alt="apple"></li>
-          <li class="download-app__android-img"><img src="./" width="47" height="56" alt="android"></li>
-          <li class="download-app__ms-img"><img src="./" width="47" height="56" alt="microsoft"></li>
-        </ul>
-        <p class="download-app__text-os">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-      </div>
+      <h3 class="download-app__title  visually-hidden">Скачать приложение</h3>
+      <a class="download-app__link" href="#">Скачать приложение</a>
+      <ul class="download-app__os">
+        <li class="download-app__os-img"><img src="/img/logo-apple.svg" width="47" height="56" alt="apple"></li>
+        <li class="download-app__os-img"><img src="/img/logo-android.svg" width="47" height="56" alt="android"></li>
+        <li class="download-app__os-img"><img src="/img/logo-microsoft.svg" width="47" height="56" alt="microsoft"></li>
+      </ul>
+      <p class="download-app__os-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
     </section>
     <section class="offer">
-      <div class="offer-wrapper">
-        <h3 class="offer__title  visually-hidden">Лучшее предложение</h3>
-        <p class="offer__review">Устали от серости мегаполиса?</p>
-        <p class="offer__review">Нам есть, что Вам предложить!</p>
-      </div>
+      <h3 class="offer__title  visually-hidden">Лучшее предложение</h3>
+      <p class="offer__review">Устали от серости мегаполиса?</p>
+      <p class="offer__review">Нам есть, что вам предложить!</p>
     </section>
     <section class="motivation">
-      <div class="motivation__wrapper">
-        <h3 class="motivation__title visually-hidden">Отличное настроение--легко!!!</h3>
-        <div class="block-cell">
-          <div class="block-cell__text">
-            <p class="block-cell__review-bold">Поднимает настроение</p>
-            <p class="block-cell__review">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </div>
-        </div>
-        <div class="block-cell">
-          <div class="block-cell__text">
-            <p class="block-cell__review-bold">Меняет мир вокруг</p>
-            <p class="block-cell__review">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </div>
-        </div>
-        <div class="block-cell">
-          <div class="block-cell__text">
-            <p class="block-cell__review-bold">Заводит новых друзей</p>
-            <p class="block-cell__review">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </div>
-        </div>
-        <div class="motivation__phone">
-          <img class="phone__smile" src="./" width="157" height="320" alt="phone">
-        </div>
+      <h3 class="motivation__title visually-hidden">Отличное настроение--легко!!!</h3>
+      <div class="block-cell">
+          <p class="block-cell__review-bold">Поднимает настроение</p>
+          <p class="block-cell__review">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
       </div>
-      <section class="hour-24">
-        <img src="./" alt="clock" class="hour-24__img" width="250" height="340">
-        <div class="hour-24__right-block">
-          <h3 class="hour-24__title">Эффект на 24 часа!</h3>
-          <p class="hour-24__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-          <a href="#" class="hour-24__link">Узнать больше об исследовании</a>
-        </div>
-      </section>
+      <div class="block-cell">
+          <p class="block-cell__review-bold">Меняет мир вокруг</p>
+          <p class="block-cell__review">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </div>
+      <div class="block-cell">
+        <p class="block-cell__review-bold">Заводит новых друзей</p>
+        <p class="block-cell__review">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+      </div>
+      <div class="motivation__phone">
+        <img class="phone__smile" src="/img/iphone-screen-mobile@1x.png" width="157" height="320" alt="phone">
+      </div>
     </section>
     <section class="reviews">
       <div class="reviews__wrapper  slider">
         <h2 class="reviews__title visually-hidden">Отзывы</h2>
         <ul class="reviews__list">
           <li class="reviews__item  slider__item">
-            <article class="reviews-article">
-              <h3 class="reviews-article__title  visually-hidden">Отзыв</h3>
-              <p class="reviews-article__name">Николай Петров</p>
-              <p class="reviews-article__old">25 лет, водитель трамвая</p>
-              <p class="reviews-article__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
-            </article>
+            <div class="block-cell">
+              <h3 class="block-cell__title  visually-hidden">Отзыв</h3>
+              <p class="block-cell__review-bold">Николай Петров</p>
+              <p class="block-cell__review  block-cell__review--padding">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
+            </div>
           </li>
         </ul>
         <div class="reviews__toggles  slider__toggles">
@@ -100,8 +79,8 @@
     </section>
     <section class="rate">
       <div class="rate__wrapper  slider">
-        <ul class="rate__table-row  rate__table-row-head">
-          <li class="rate__table-cell">
+        <ul class="rate__table-row-head">
+          <li class="rate__table-cell-head">
             <h3 class="rate__title">Стандарт</h3>
             <p class="rate__price">3,99 usd</p>
           </li>
@@ -115,28 +94,26 @@
         <ul class="rate__table-row">
           <li class="rate__table-cell">Комментарии</li>
         </ul>
-      </div>
-
-      <div class="rate__toggles  slider__toggles  toggles__none">
-        <label class="slider__toggle"><input type="radio" class="slider__input"  name="rate"></label>
-        <label class="slider__toggle"><input type="radio" class="slider__input"  name="rate" checked></label>
-        <label class="slider__toggle"><input type="radio" class="slider__input"  name="rate"></label>
+        <div class="rate__toggles  slider__toggles">
+          <label class="slider__toggle"><input type="radio" class="slider__input"  name="rate"></label>
+          <label class="slider__toggle"><input type="radio" class="slider__input"  name="rate" checked></label>
+          <label class="slider__toggle"><input type="radio" class="slider__input"  name="rate"></label>
+        </div>
       </div>
     </section>
-
     <footer class="footer-contacts">
-      <div class="footer-contacts__wrapper">
-        <h2 class="footer-contacts__title  visually-hidden">Свяжитесь с нами</h2>
-        <div class="contact__text-wrapper">
-          <p class="contact__text">Остались вопросы?</p>
-          <p class="contact__text">Свяжитесь с нами!</p>
-        </div>
-        <ul class="contact__list">
-          <li class="contact__item">Звоните:<a class="contact-link  contact-link--red" href="tel:+78125556666">+7 (812) 555-66-66</a> </li>
-          <li class="contact__item">Пишите:<a  class="contact-link  contact-link--red" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
-          <li class="contact__item">Приезжайте в гости:<address class="contact-link  contact-link--red">ул. Большая Конюшенная, 19/8</address></li>
-        </ul>
-        <img class="footer-contacts__img" src="./" alt="map" width="320" height="200">
+      <h2 class="footer-contacts__title  visually-hidden">Свяжитесь с нами</h2>
+      <div class="footer-contacts__wrapper-text">
+        <p class="footer-contacts__text">Остались вопросы?</p>
+        <p class="footer-contacts__text">Свяжитесь с нами!</p>
+      </div>
+      <ul class="footer-contacts__list">
+        <li class="footer-contacts__item">Звоните:<br><a class="contact-link" href="tel:+78125556666">+7 (812) 555-66-66</a> </li>
+        <li class="footer-contacts__item">Пишите:<br><a  class="contact-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+        <li class="footer-contacts__item">Приезжайте в гости:<br><address class="contact-link">ул. Большая Конюшенная, 19/8</address></li>
+      </ul>
+      <div class="footer-contacts__map">
+        <img class="footer-contacts__img" src="/img/bg-map-mobile@1x.png" alt="map" width="320" height="421">
       </div>
     </footer>
   </div>

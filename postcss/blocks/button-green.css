@@ -1,0 +1,10 @@
+.button-green {
+  width: 100%;
+  padding: 25px;
+  border: none;
+  color: $white;
+  @mixin font-family $font-bold;
+  font-size: 18px;
+  @mixin upp;
+  @mixin bg-color $green;
+}

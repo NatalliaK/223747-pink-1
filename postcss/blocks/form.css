@@ -1,0 +1,94 @@
+.form__desc {
+  padding: 54px 20px 52px;
+  line-height: 2;
+  @mixin line;
+  @mixin align $cent;
+}
+
+.form__fieldset {
+  @mixin cont;
+  padding-bottom: 43px;
+  @mixin line;
+  border: none;
+}
+
+.form__fieldset--grey {
+  margin-bottom: 41px;
+  padding: 0;
+  @mixin bg-color $grey-bg;
+}
+
+.form__legend {
+  padding: 40px 0;
+  width: 100%;
+  @mixin align $cent;
+  @mixin upp;
+  color: $pink;
+  @mixin bg-color $grey-bg;
+}
+
+.form__legend--textarea {
+  padding: 0;
+  padding-bottom: 20px;
+  @mixin bg-color $white;
+}
+
+.form__label {
+  display: block;
+  text-indent: 23px;
+  @mixin upp;
+  color: $pink;
+}
+
+.form__label--grey {
+  text-transform: none;
+  color: $grey-txt;
+  font-size: 18px;
+}
+
+.form__label--check {
+  padding-bottom: 43px;
+}
+
+.form__label--radio {
+  padding-bottom: 37px;
+}
+
+.form__input {
+  margin: 27px 0 15px;
+  padding: 24px 0 24px 23px;
+  display: block;
+  width: 257px;
+  font-size: 18px;
+}
+
+.form__check {
+  margin-right: 31px;
+}
+
+.form__radio {
+  margin-right: 31px;
+}
+
+.form__textarea {
+  width: 240px;
+  height: 160px;
+  padding: 20px;
+  @mixin font-family $font-regular;
+  font-size: 18px;
+}
+
+.form__footer {
+  @mixin cont;
+  @mixin align $cent;
+}
+
+.form__desc-footer {
+  padding: 45px 0 25px;
+  color: $pink;
+  @mixin upp;
+}
+
+.form__desc-footer--black {
+  color: $grey-txt;
+}

@@ -1,0 +1,4 @@
+.social-link {
+  margin: 0 6px;
+  @mixin align $cent;
+}

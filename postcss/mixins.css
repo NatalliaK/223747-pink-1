@@ -1,0 +1,19 @@
+@define-mixin line {
+  outline: 1px solid green;
+}
+
+@define-mixin upp {
+  text-transform: uppercase;
+}
+
+@define-mixin align $place{
+  text-align: $place;
+}
+
+@define-mixin cont {
+  padding: 0 20px;
+}
+
+@define-mixin bg-color $color{
+  background-color: $color;
+}

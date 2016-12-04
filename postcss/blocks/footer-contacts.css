@@ -1,0 +1,36 @@
+.footer-contacts {
+  @mixin line;
+  @mixin align $cent;
+}
+
+.footer-contacts__wrapper-text {
+  padding: 46px 0;
+}
+
+.footer-contacts__text {
+  @mixin font-family $font-light;
+  font-size: 24px;
+}
+
+.footer-contacts__list {
+  padding-bottom: 10px;
+  @mixin cont;
+}
+
+.footer-contacts__item {
+  padding-bottom: 30px;
+  @mixin font-family $font-bold;
+  font-size: 18px;
+}
+
+.contact-link {
+  @mixin font-family $font-light;
+  font-size: 24px;
+  color: $pink;
+  font-style: normal;
+}
+
+.footer-contacts__map {
+  height: 200px;
+  overflow: hidden;
+}
