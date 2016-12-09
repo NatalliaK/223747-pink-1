@@ -172,9 +172,6 @@
     padding-left: 0;
     width: 350px;
     float: left;
-    &:last-of-type {
-      @mixin clearfix;
-     }
   }
 
   .form__fieldset--big {

@@ -70,7 +70,7 @@
     display: inline-block;
     &:last-of-type {
       @mixin clearfix;
-     }
+    }
   }
 
   .your-best__range {

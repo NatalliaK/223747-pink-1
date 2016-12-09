@@ -41,13 +41,13 @@
   border: 2px solid $grey-line;
   &--no-vis {
     display: none;
-   }
+  }
 }
 
 @media (min-width: $tab) {
   .rate {
-  @mixin cont;
-  @mixin bg-color $grey-bg;
+    @mixin cont;
+    @mixin bg-color $grey-bg;
   }
 
   .rate__wrapper {
@@ -68,7 +68,7 @@
     display: table-cell;
     border-right: 2px solid $grey-bg;
     &--empty {
-     @mixin bg-color $grey-bg;
+      @mixin bg-color $grey-bg;
     }
   }
 
