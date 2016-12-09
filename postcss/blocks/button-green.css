@@ -8,3 +8,10 @@
   @mixin upp;
   @mixin bg-color $green;
 }
+
+@media (min-width: $tab) {
+  .button-green {
+    width: 300px;
+    border-radius: 5px;
+  }
+}

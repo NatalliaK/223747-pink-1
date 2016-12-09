@@ -1,3 +1,14 @@
 .reviews {
   @mixin line;
 }
+
+@media (min-width: $desc) {
+  .reviews {
+    @mixin cont;
+    height: 415px;
+  }
+
+  .reviews__toggles {
+    display: none;
+  }
+}

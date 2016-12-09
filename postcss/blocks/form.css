@@ -5,6 +5,10 @@
   @mixin align $cent;
 }
 
+.form__desc--hidden {
+  display: none;
+}
+
 .form__fieldset {
   @mixin cont;
   padding-bottom: 43px;
@@ -19,12 +23,15 @@
 }
 
 .form__legend {
-  padding: 40px 0;
-  width: 100%;
+  padding: 40px 40px;
   @mixin align $cent;
   @mixin upp;
   color: $pink;
   @mixin bg-color $grey-bg;
+}
+
+.form__legend--hidden {
+  display: none;
 }
 
 .form__legend--textarea {
@@ -91,4 +98,103 @@
 
 .form__desc-footer--black {
   color: $grey-txt;
+}
+
+@media (min-width: $tab) {
+  .form {
+    @mixin cont;
+    @mixin line;
+  }
+
+  .form__desc {
+    padding: 100px 40px 70px;
+    font-size: 18px;
+  }
+
+  .form__desc--hidden {
+    display: block;
+  }
+
+  .form__fieldset {
+    padding: 0 60px;
+    border: 2px solid $grey-line;
+  }
+
+  .form__fieldset--grey{
+    @mixin bg-color $white;
+  }
+
+  .form__legend {
+    @mixin bg-color $white;
+  }
+
+  .form__legend--hidden {
+    display: block;
+  }
+
+  .form__input {
+    display: inline;
+    margin-left: 20px;
+    padding: 20px 0 20px 20px;
+    width: 320px;
+  }
+
+  .form__textarea {
+    width: 500px;
+    height: 190px;
+    margin-bottom: 55px;
+  }
+
+  .form__footer {
+    @mixin clearfix;
+  }
+
+  .form__button {
+    float: left;
+  }
+
+  .form__desc-footer {
+    float: right;
+  }
+}
+
+@media (min-width: $desc) {
+  .form__desc {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .form__desc--hidden {
+    display: inline-block;
+  }
+
+  .form__fieldset {
+    padding-left: 0;
+    width: 350px;
+    float: left;
+    &:last-of-type {
+      @mixin clearfix;
+     }
+  }
+
+  .form__fieldset--big {
+    width: 100%;
+  }
+
+  .form__label--big {
+    margin-left: 60px;
+    float: left;
+  }
+
+  .form__input--big {
+    display: block;
+    width: 350px;
+  }
+
+  .form__textarea {
+    margin-left: 70px;
+    padding: 24px;
+    width: 820px;
+    height: 130px;
+  }
 }

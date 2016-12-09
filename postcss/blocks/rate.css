@@ -12,8 +12,10 @@
 }
 
 .rate__table-cell-head {
-  padding: 10px 0;
   @mixin align $cent;
+  &--no-vis {
+    display: none;
+  }
 }
 
 .rate__title {
@@ -34,8 +36,85 @@
 }
 
 .rate__table-cell {
-  margin-bottom: -1px;
+  margin-bottom: -2px;
   padding: 23px 0 23px 23px;
   border: 2px solid $grey-line;
-  border-collapse: collapse;
+  &--no-vis {
+    display: none;
+   }
+}
+
+@media (min-width: $tab) {
+  .rate {
+  @mixin cont;
+  @mixin bg-color $grey-bg;
+  }
+
+  .rate__wrapper {
+    display: table;
+    width: 620px;
+    padding-top: 35px;
+    border-collapse: collapse;
+  }
+
+  .rate__table-row-head {
+    display: table-row;
+    :last-child {
+      border: none;
+    }
+  }
+
+  .rate__table-cell-head {
+    display: table-cell;
+    border-right: 2px solid $grey-bg;
+    &--empty {
+     @mixin bg-color $grey-bg;
+    }
+  }
+
+  .rate__title {
+    font-size: 16px;
+  }
+
+  .rate__price {
+    font-size: 18px;
+  }
+
+  .rate__table-row {
+    display: table-row;
+  }
+
+  .rate__table-cell {
+    display: table-cell;
+    padding: 10px 15px;
+    width: 155px;
+    text-transform: none;
+  }
+
+  .rate__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: $desc) {
+  .rate {
+    padding-top: 70px;
+  }
+
+  .rate__wrapper {
+    width: 940px;
+  }
+
+  .rate__title {
+    font-size: 18px;
+  }
+
+  .rate__price {
+    font-size: 24px;
+  }
+
+  .rate__table-cell {
+    padding: 20px;
+    font-size: 18px;
+  }
 }

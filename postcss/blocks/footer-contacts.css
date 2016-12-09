@@ -34,3 +34,39 @@
   height: 200px;
   overflow: hidden;
 }
+
+@media (min-width: $tab) {
+  .footer-contacts__text {
+    font-size: 40px;
+  }
+
+  .footer-contacts__item {
+    display: inline-block;
+    padding: 0 25px;
+    width: 250px;
+  }
+
+  .footer-contacts__map {
+    height: 380px;
+  }
+
+  .footer-contacts__img {
+    width: 700px;
+    height: auto;
+  }
+}
+
+@media (min-width: $desc) {
+  .footer-contacts__text {
+    font-size: 50px;
+  }
+
+  .footer-contacts__map {
+    height: 500px;
+    overflow: hidden;
+    img {
+      width: 1200px;
+      height: auto;
+    }
+  }
+}

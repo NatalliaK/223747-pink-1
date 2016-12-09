@@ -4,6 +4,10 @@
   @mixin align $cent;
 }
 
+.page-footer--index {
+  display: none;
+}
+
 .page-footer__logo {
   margin: 40px 0;
 }
@@ -18,4 +22,31 @@
 
 .page-footer__copyright-link {
   padding-left: 25px;
+}
+
+@media (min-width: $tab) {
+  .page-footer {
+    height: 127px;
+    line-height: 127px;
+    img, p {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+    }
+  }
+
+  .page-footer--index {
+    display: block;
+  }
+
+  .page-footer__copyright {
+    width: 150px;
+  }
+}
+
+@media (min-width: $desc) {
+  .page-footer {
+    height: 200px;
+    line-height: 200px;
+  }
 }

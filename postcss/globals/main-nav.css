@@ -14,6 +14,45 @@
     color:$white;
     box-shadow: inset 0 -1px 0 0 $black;
     @mixin upp;
-    @mixin font-family font-bold;
+    @mixin font-family $font-bold;
+  }
+}
+
+@media (min-width: $tab) {
+  .main-nav__toggle {
+    top: 45px;
+    right: 40px;
+  }
+}
+
+@media (min-width: $desc){
+  .main-nav {
+    z-index: 3;
+    position: absolute;
+    height: 107px;
+    width: 1200px;
+    padding: 0;
+    @mixin bg-color $black-opacity;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__wrapper {
+    display: inline-block;
+    float: right;
+    margin-right: 120px;
+  }
+
+  .main-nav__item {
+    display: inline-block;
+    margin-left: 80px;
+    line-height: 107px;
+    a {
+      @mixin font-family $font-regular;
+      font-size: 18px;
+      text-transform: none;
+    }
   }
 }

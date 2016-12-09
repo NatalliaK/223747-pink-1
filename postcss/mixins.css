@@ -11,9 +11,34 @@
 }
 
 @define-mixin cont {
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: $tab) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media (min-width: $desc) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
 @define-mixin bg-color $color{
   background-color: $color;
+}
+
+@define-mixin tab {
+  min-width: $tablet;
+}
+
+@define-mixin desc {
+  min-width: $desctop;
+}
+
+@define-mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }

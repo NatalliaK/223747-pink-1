@@ -19,3 +19,78 @@
 .block-cell__review--padding {
   padding-top: 30px;
 }
+
+.block-cell__review-old {
+  display: none;
+}
+
+@media (min-width: $tab) {
+  .block-cell__phone {
+    display: none;
+  }
+
+  .block-cell__review-bold {
+    margin-top: 0;
+    padding: 25px 0 20px;
+  }
+
+  .block-cell__review-bold--font-size {
+    font-size: 20px;
+  }
+
+  .block-cell__review--grey {
+    padding-top: 0;
+    padding-bottom: 12px;
+    @mixin align $left;
+  }
+
+  .block-cell__review--font-size {
+    font-size: 18px;
+  }
+
+  .block-cell__review-old {
+    display: block;
+  }
+
+  .block-cell--right {
+    width: 310px;
+    float: right;
+  }
+}
+
+@media (min-width: $desc) {
+  .block-cell {
+    display: inline-block;
+    padding: 0 30px;
+  }
+
+  .block-cell--big {
+    padding: 100px 80px 0;
+  }
+
+  .block-cell--right {
+    width: 250px;
+  }
+
+  .block-cell__phone {
+    display: inline-block;
+  }
+
+  .block-cell__review-bold {
+    font-size: 30px;
+  }
+
+  .block-cell__review-bold--font-size {
+    font-size: 24px;
+  }
+
+  .block-cell__review {
+    font-size: 18px;
+    @mixin align $cent;
+    line-height: 1.7em;
+  }
+
+  .block-cell__review-old {
+    font-size: 18px;
+  }
+}

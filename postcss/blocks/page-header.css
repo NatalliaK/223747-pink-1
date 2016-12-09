@@ -10,3 +10,32 @@
   background-image: url("/img/bg-back-mobile@1x.jpg");
   background-position: top -70px center;
 }
+
+@media (min-width: $tab) {
+  .page-header__bg--index {
+    height: 700px;
+    background-size: auto 500px, auto 700px;
+    background-position: bottom left 190px, center;
+  }
+
+  .page-header__bg--inner {
+    height: 330px;
+  }
+}
+
+@media (min-width: $desc) {
+  .page-header__bg--index {
+    top: -107px;
+    height: 853px;
+    background-size: auto 500px, auto 853px;
+    background-position: bottom left 600px, center;
+  }
+
+  .page-header__bg--inner {
+    height: 395px;
+    @mixin line;
+    background-size: 1200px auto;
+    background-position: center center;
+  }
+}
+
