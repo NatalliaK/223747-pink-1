@@ -124,6 +124,18 @@
     @mixin bg-color $white;
   }
 
+  .form__fieldset--trans-progress {
+    transform: translateY(660px);
+  }
+
+  .form__fieldset--trans-os {
+    transform: translateY(-893px);
+  }
+
+  .form__fieldset--trans-contact {
+    transform: translateY(-260px);
+  }
+
   .form__legend {
     @mixin bg-color $white;
   }
@@ -170,7 +182,6 @@
 
   .form__fieldset {
     padding-left: 0;
-    width: 350px;
     float: left;
   }
 
@@ -178,9 +189,26 @@
     width: 100%;
   }
 
+  .form__fieldset--trans-progress {
+    transform: translateY(300px);
+  }
+
+  .form__fieldset--trans-os {
+    transform: translateY(-790px) translateX(490px);
+  }
+
+  .form__fieldset--trans-textarea {
+    margin-top: -270px;
+  }
+
   .form__label--big {
     margin-left: 60px;
     float: left;
+  }
+
+  .form__input {
+    padding: 20px;
+    width: auto;
   }
 
   .form__input--big {

@@ -12,6 +12,7 @@
 }
 
 .your-best__icons {
+  position: relative;
   @mixin align $cent;
 }
 
@@ -25,7 +26,9 @@
 }
 
 .your-best__range {
-  margin-bottom: 32px;
+  position: absolute;
+  top: 65px;
+  left: 0;
   width: 100%;
 }
 
@@ -51,6 +54,10 @@
 }
 
 @media (min-width: $tab) {
+  .your-best__wrapper {
+    @mixin clearfix;
+  }
+
   .your-best__img {
     padding: 45px 40px 55px 0;
     width: 300px;
@@ -59,31 +66,31 @@
   }
 
   .your-best__icons {
-    padding-top: 65px;
-  }
-
-  .your-best__icon {
-    display: block;
+    margin-top: -440px;
+    width: 300px;
+    float: right;
   }
 
   .your-best__label--hidden {
     display: inline-block;
-    &:last-of-type {
-      @mixin clearfix;
-    }
   }
 
   .your-best__range {
+    position: static;
+    margin-bottom: 0;
     width: 203px;
     float: right;
+    &:first-of-type {
+      margin-top: 19px;
+     }
   }
 
   .your-best__btn {
     width: 260px;
   }
 
-  .your-best__btn--grey {
-    margin-left: 340px;
+  .your-best__btn--red {
+    margin-top: 0;
   }
 }
 
@@ -103,11 +110,19 @@
     padding-right: 90px;
   }
 
-  .your-best__btn {
-    display: inline-block;
+  .your-best__icons {
+    margin-top: 50px;
+    margin-right: 60px;
+    width: 410px;
   }
 
-  .your-best__btn--grey {
-    margin-left: 210px;
+  .your-best__range {
+    width: 290px;
+  }
+
+  .your-best__btn {
+    margin: 90px 10px 20px;
+    width: 183px;
+    display: inline-block;
   }
 }
