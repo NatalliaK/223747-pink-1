@@ -7,6 +7,12 @@
   width: 320px;
   margin: 0 auto;
   color: $grey-txt;
+  @media (min-width: $tab) {
+    width: 700px;
+  }
+  @media (min-width: $desc) {
+    width: 1200px;
+  }
 }
 
 li {

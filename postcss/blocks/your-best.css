@@ -12,6 +12,7 @@
 }
 
 .your-best__icons {
+  position: relative;
   @mixin align $cent;
 }
 
@@ -20,8 +21,14 @@
   border: none;
 }
 
+.your-best__label--hidden {
+  display: none;
+}
+
 .your-best__range {
-  margin-bottom: 32px;
+  position: absolute;
+  top: 65px;
+  left: 0;
   width: 100%;
 }
 
@@ -44,4 +51,78 @@
   margin-bottom: 42px;
   border-color: $grey-btn;
   color: $grey-btn;
+}
+
+@media (min-width: $tab) {
+  .your-best__wrapper {
+    @mixin clearfix;
+  }
+
+  .your-best__img {
+    padding: 45px 40px 55px 0;
+    width: 300px;
+    height: 400px;
+    float: left;
+  }
+
+  .your-best__icons {
+    margin-top: -440px;
+    width: 300px;
+    float: right;
+  }
+
+  .your-best__label--hidden {
+    display: inline-block;
+  }
+
+  .your-best__range {
+    position: static;
+    margin-bottom: 0;
+    width: 203px;
+    float: right;
+    &:first-of-type {
+      margin-top: 19px;
+    }
+  }
+
+  .your-best__btn {
+    width: 260px;
+  }
+
+  .your-best__btn--red {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $desc) {
+  .your-best {
+    @mixin cont;
+    @mixin bg-color $white;
+  }
+
+  .your-best__wrapper {
+    padding: 0;
+    @mixin bg-color $grey-bg;
+  }
+
+  .your-best__img {
+    padding-left: 80px;
+    padding-right: 90px;
+  }
+
+  .your-best__icons {
+    margin-top: 50px;
+    margin-right: 60px;
+    width: 410px;
+  }
+
+  .your-best__range {
+    width: 290px;
+  }
+
+  .your-best__btn {
+    margin: 90px 10px 20px;
+    width: 183px;
+    display: inline-block;
+  }
 }

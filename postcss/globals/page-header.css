@@ -19,6 +19,7 @@
 
 .page-header__bg {
   width: auto;
+  @mixin cont;
 }
 
 .page-header__title {
@@ -28,4 +29,35 @@
   @mixin align $cent;
   vertical-align: middle;
   color: $white;
+}
+
+@media (min-width: $tab) {
+  .page-header__top-block {
+    height: 110px;
+    line-height: 110px;
+  }
+
+  .page-header__title {
+    padding-top: 50px;
+    font-size: 50px;
+  }
+}
+
+@media (min-width: $desc) {
+  .page-header__top-block {
+    display: inline-block;
+    height: 107px;
+    line-height: 107px;
+    float: left;
+    margin-left: 120px;
+    padding: 0;
+  }
+
+  .page-header__bg {
+    position: relative;
+  }
+
+  .page-header__title {
+    padding-top: 170px;
+  }
 }

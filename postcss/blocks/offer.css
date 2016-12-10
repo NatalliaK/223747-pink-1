@@ -10,3 +10,25 @@
   font-size: 24px;
   @mixin align $cent;
 }
+
+@media (min-width: $tab) {
+  .offer {
+    margin-top: -405px;
+  }
+
+  .offer__review {
+    padding: 20px 10px;
+    font-size: 40px;
+  }
+}
+
+@media (min-width: $desc) {
+  .offer {
+    margin-top: -512px;
+    margin-bottom: 75px;
+  }
+
+  .offer__review {
+    font-size: 50px;
+  }
+}

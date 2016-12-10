@@ -25,3 +25,35 @@
   margin: 48px 20px 0;
   width: 280px;
 }
+
+@media (min-width: $tab) {
+  .popup {
+    margin: 0 auto;
+    width: 460px;
+  }
+
+  .popup--big {
+    width: 780px;
+  }
+
+  .popup__title {
+    padding: 45px 110px;
+    @mixin font-family font-bold;
+    font-size: 30px;
+  }
+
+  .popup__text {
+    padding: 0 70px 40px;
+    line-height: 1.5em;
+    font-size: 18px;
+  }
+
+  .popup__text--big {
+    padding-right: 160px;
+    padding-left: 160px;
+  }
+
+  .popup__btn--grey-bg {
+    width: 460px;
+  }
+}

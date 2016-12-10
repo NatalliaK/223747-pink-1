@@ -8,3 +8,33 @@
   overflow: hidden;
   @mixin align $cent;
 }
+
+@media (min-width: $tab) {
+  .motivation {
+    height: 487px;
+  }
+
+  .motivation__phone {
+    height: 485px;
+    padding-left: 40px;
+    @mixin clearfix;
+  }
+
+  .phone__smile {
+    width: 270px;
+    height: 485px;
+  }
+}
+
+@media (min-width: $desc) {
+  .motivation {
+    @mixin cont;
+    padding-bottom: 70px;
+    @mixin clearfix;
+    height: 600px;
+  }
+
+  .motivation__phone {
+    display: none;
+  }
+}

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -27,6 +28,7 @@
     </header>
     <section class="download-app">
       <h3 class="download-app__title  visually-hidden">Скачать приложение</h3>
+      <p class="download-app__look">Взгляните на жизнь иначе!</p>
       <a class="download-app__link" href="#">Скачать приложение</a>
       <ul class="download-app__os">
         <li class="download-app__os-img"><img src="/img/logo-apple.svg" width="47" height="56" alt="apple"></li>
@@ -38,24 +40,35 @@
     <section class="offer">
       <h3 class="offer__title  visually-hidden">Лучшее предложение</h3>
       <p class="offer__review">Устали от серости мегаполиса?</p>
-      <p class="offer__review">Нам есть, что вам предложить!</p>
+      <p class="offer__review">Нам есть, что вам <br> предложить!</p>
     </section>
     <section class="motivation">
       <h3 class="motivation__title visually-hidden">Отличное настроение--легко!!!</h3>
-      <div class="block-cell">
-          <p class="block-cell__review-bold">Поднимает настроение</p>
-          <p class="block-cell__review">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+      <div class="block-cell  block-cell--right">
+        <img class="block-cell__phone" src="img/iphone-screen-mobile@1x.png" alt="phone" width="180" height="335">
+        <p class="block-cell__review-bold">Поднимает настроение</p>
+        <p class="block-cell__review  block-cell__review--grey">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
       </div>
-      <div class="block-cell">
-          <p class="block-cell__review-bold">Меняет мир вокруг</p>
-          <p class="block-cell__review">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      <div class="block-cell  block-cell--right">
+        <img class="block-cell__phone" src="img/iphone-screen-mobile@1x.png" alt="phone" width="180" height="335">
+        <p class="block-cell__review-bold">Меняет мир вокруг</p>
+        <p class="block-cell__review  block-cell__review--grey">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
       </div>
-      <div class="block-cell">
+      <div class="block-cell  block-cell--right">
+        <img class="block-cell__phone" src="img/iphone-screen-mobile@1x.png" alt="phone" width="180" height="335">
         <p class="block-cell__review-bold">Заводит новых друзей</p>
-        <p class="block-cell__review">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+        <p class="block-cell__review  block-cell__review--grey">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
       </div>
       <div class="motivation__phone">
         <img class="phone__smile" src="/img/iphone-screen-mobile@1x.png" width="157" height="320" alt="phone">
+      </div>
+    </section>
+    <section class="hour-24">
+      <img src="./" alt="clock" class="hour-24__img" width="245" height="290">
+      <div class="hour-24__right-block">
+        <h3 class="hour-24__title">Эффект <br> на 24 часа!</h3>
+        <p class="hour-24__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <a href="#" class="hour-24__link">Узнать больше об исследовании</a>
       </div>
     </section>
     <section class="reviews">
@@ -63,10 +76,11 @@
         <h2 class="reviews__title visually-hidden">Отзывы</h2>
         <ul class="reviews__list">
           <li class="reviews__item  slider__item">
-            <div class="block-cell">
+            <div class="block-cell  block-cell--big">
               <h3 class="block-cell__title  visually-hidden">Отзыв</h3>
-              <p class="block-cell__review-bold">Николай Петров</p>
-              <p class="block-cell__review  block-cell__review--padding">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
+              <p class="block-cell__review-bold  block-cell__review-bold--font-size">Николай Петров</p>
+              <p class="block-cell__review-old">25 лет, водитель трамвая</p>
+              <p class="block-cell__review  block-cell__review--padding  block-cell__review--font-size">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
             </div>
           </li>
         </ul>
@@ -80,19 +94,37 @@
     <section class="rate">
       <div class="rate__wrapper  slider">
         <ul class="rate__table-row-head">
+          <li class="rate__table-cell-head  rate__table-cell-head--empty"></li>
+          <li class="rate__table-cell-head  rate__table-cell-head--no-vis">
+            <h3 class="rate__title">База</h3>
+            <p class="rate__price">1,99 usd</p>
+          </li>
           <li class="rate__table-cell-head">
             <h3 class="rate__title">Стандарт</h3>
             <p class="rate__price">3,99 usd</p>
           </li>
+          <li class="rate__table-cell-head  rate__table-cell-head--no-vis">
+            <h3 class="rate__title">Анлим</h3>
+            <p class="rate__price">9,99 usd</p>
+          </li>
         </ul>
         <ul class="rate__table-row">
           <li class="rate__table-cell">Розовый фильтр</li>
+          <li class="rate__table-cell  rate__table-cell--no-vis"></li>
+          <li class="rate__table-cell  rate__table-cell--no-vis"></li>
+          <li class="rate__table-cell  rate__table-cell--no-vis"></li>
         </ul>
         <ul class="rate__table-row">
-          <li class="rate__table-cell">Смайлики</li>
+          <li class="rate__table-cell  rate__table-cell--visible">Смайлики</li>
+          <li class="rate__table-cell  rate__table-cell--no-vis"></li>
+          <li class="rate__table-cell  rate__table-cell--no-vis"></li>
+          <li class="rate__table-cell  rate__table-cell--no-vis"></li>
         </ul>
         <ul class="rate__table-row">
-          <li class="rate__table-cell">Комментарии</li>
+          <li class="rate__table-cell  rate__table-cell--visible">Комментарии</li>
+          <li class="rate__table-cell  rate__table-cell--no-vis"></li>
+          <li class="rate__table-cell  rate__table-cell--no-vis"></li>
+          <li class="rate__table-cell  rate__table-cell--no-vis"></li>
         </ul>
         <div class="rate__toggles  slider__toggles">
           <label class="slider__toggle"><input type="radio" class="slider__input"  name="rate"></label>
@@ -115,6 +147,20 @@
       <div class="footer-contacts__map">
         <img class="footer-contacts__img" src="/img/bg-map-mobile@1x.png" alt="map" width="320" height="421">
       </div>
+    </footer>
+    <footer class="page-footer  page-footer--index">
+      <img class="page-footer__logo" src="/img/logo-pink-blue-mobile.svg" alt="pink" width="160" height="45">
+      <p class="page-footer__social">
+            <span class="social-links">
+              <a class="social-link  social-link--tw" href="https://tw.com/htmlacademy" target="_blank"><img src="/img/icon-twitter.svg" alt="twitter" width="20" height="20"></a>
+              <a class="social-link  social-link--fb" href="https://fb.com/htmlacademy" target="_blank"><img src="/img/icon-facebook.svg" alt="facebook" width="20" height="20"></a>
+              <a class="social-link  social-link--anythere" href="https://anythere.com/htmlacademy" target="_blank"><img src="/img/icon-youtube.svg" alt="youtube" width="20" height="20"></a>
+            </span>
+      </p>
+      <p class="page-footer__copyright">
+        Разработано
+        <a class="page-footer__copyright-link  btn" href="https://htmlacademy.ru/"><img class="page-footer__copyright-img" src="img/logo-htmlacademy.svg"></a>
+      </p>
     </footer>
   </div>
   </body>

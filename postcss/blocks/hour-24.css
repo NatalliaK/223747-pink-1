@@ -1,0 +1,56 @@
+.hour-24 {
+  display: none;
+  @mixin cont;
+}
+
+@media (min-width: $tab) {
+  .hour-24 {
+    display: block;
+    @mixin cont;
+    img {
+      float: left;
+      margin-right: 60px;
+      border: 1px solid #ccc;
+      @mixin clearfix;
+    }
+  }
+
+  .hour-24__right-block {
+    padding: 0 10px;
+    line-height: 2em;
+  }
+
+  .hour-24__title {
+    font-size: 30px;
+    line-height: 1.3em;
+    padding-bottom: 24px;
+  }
+
+  .hour-24__text {
+    padding-right: 70px;
+    padding-bottom: 10px;
+  }
+
+  .hour-24__link {
+    color: $pink;
+    border-bottom: 1px solid $pink;
+  }
+}
+
+@media (min-width: $desc) {
+  .hour-24 {
+    padding-bottom: 65px;
+    height: 415px;
+    @mixin bg-color $grey-bg;
+    img {
+      margin-right: 70px;
+      width: 315px;
+      height: 372px;
+    }
+  }
+
+  .hour-24__right-block {
+    padding-top: 100px;
+    font-size: 18px;
+  }
+}
