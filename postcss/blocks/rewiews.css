@@ -2,10 +2,20 @@
   @mixin line;
 }
 
+.reviews__quote {
+  display: none;
+}
+
 @media (min-width: $desc) {
   .reviews {
     @mixin cont;
     height: 415px;
+  }
+
+  .reviews__quote {
+    margin: 0 auto;
+    display: block;
+    @mixin line;
   }
 
   .reviews__toggles {

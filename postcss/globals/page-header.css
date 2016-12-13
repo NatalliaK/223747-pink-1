@@ -1,20 +1,14 @@
 .page-header__top-block {
   position: relative;
   @mixin cont;
-  height: 70px;
-  line-height: 70px;
+  height: 67px;
+  line-height: 67px;
   border: 1px solid #485461;
   box-shadow: inset 0 -1px 0 0 $black;
 
   img {
     vertical-align: middle;
   }
-}
-
-.main-nav__toggle {
-  position: absolute;
-  right: 20px;
-  top: 20px;
 }
 
 .page-header__bg {
@@ -46,18 +40,19 @@
 @media (min-width: $desc) {
   .page-header__top-block {
     display: inline-block;
-    height: 107px;
-    line-height: 107px;
+    height: 110px;
+    line-height: 110px;
     float: left;
-    margin-left: 120px;
+    margin-left: 130px;
     padding: 0;
-  }
-
-  .page-header__bg {
-    position: relative;
   }
 
   .page-header__title {
     padding-top: 170px;
+  }
+
+  .page-header {
+    display: flex;
+    flex-direction: column;
   }
 }

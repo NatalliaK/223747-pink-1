@@ -46,6 +46,8 @@
 
 @media (min-width: $tab) {
   .rate {
+    padding-top: 35px;
+    padding-bottom: 70px;
     @mixin cont;
     @mixin bg-color $grey-bg;
   }
@@ -53,7 +55,6 @@
   .rate__wrapper {
     display: table;
     width: 620px;
-    padding-top: 35px;
     border-collapse: collapse;
   }
 

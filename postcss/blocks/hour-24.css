@@ -5,25 +5,32 @@
 
 @media (min-width: $tab) {
   .hour-24 {
-    display: block;
-    @mixin cont;
+    padding-top: 60px;
+    margin-bottom: 107px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
     img {
-      float: left;
-      margin-right: 60px;
       border: 1px solid #ccc;
-      @mixin clearfix;
     }
   }
 
   .hour-24__right-block {
+    flex-basis: 310px;
+    flex-grow: 1;
+    margin-left: 60px;
     padding: 0 10px;
     line-height: 2em;
   }
 
   .hour-24__title {
-    font-size: 30px;
-    line-height: 1.3em;
     padding-bottom: 24px;
+    line-height: 1.3em;
+    @mixin font-family $font-bold;
+    font-size: 30px;
   }
 
   .hour-24__text {
@@ -39,8 +46,9 @@
 
 @media (min-width: $desc) {
   .hour-24 {
+    margin-bottom: 70px;
     padding-bottom: 65px;
-    height: 415px;
+    width: 940px;
     @mixin bg-color $grey-bg;
     img {
       margin-right: 70px;
@@ -50,7 +58,11 @@
   }
 
   .hour-24__right-block {
-    padding-top: 100px;
+    flex-basis: 570px;
     font-size: 18px;
+  }
+
+  .hour-24__text {
+    padding-right: 0;
   }
 }

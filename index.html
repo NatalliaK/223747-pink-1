@@ -15,28 +15,26 @@
           <img src="/img/logo-pink-white-mobile.svg" width="75" height="25" alt="PINK">
           <button class="main-nav__toggle" type="button">Открыть меню</button>
         </div>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a>Главная</a></li>
-            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-            <li class="main-nav__item"><a href="https://htmlacademy.ru" target="_blank">HTML academy</a></li>
-          </ul>
-        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item  main-nav__item--active"><a>Главная</a></li>
+          <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru" target="_blank">HTML academy</a></li>
+        </ul>
       </nav>
       <div class="page-header__bg  page-header__bg--index"></div>
+      <section class="download-app">
+        <h3 class="download-app__title  visually-hidden">Скачать приложение</h3>
+        <p class="download-app__look">Взгляните на жизнь иначе!</p>
+        <a class="download-app__link" href="#">Скачать приложение</a>
+        <ul class="download-app__os">
+          <li class="download-app__os-img"><img src="/img/logo-apple.svg" width="47" height="56" alt="apple"></li>
+          <li class="download-app__os-img"><img src="/img/logo-android.svg" width="47" height="56" alt="android"></li>
+          <li class="download-app__os-img"><img src="/img/logo-microsoft.svg" width="47" height="56" alt="microsoft"></li>
+        </ul>
+        <p class="download-app__os-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </section>
     </header>
-    <section class="download-app">
-      <h3 class="download-app__title  visually-hidden">Скачать приложение</h3>
-      <p class="download-app__look">Взгляните на жизнь иначе!</p>
-      <a class="download-app__link" href="#">Скачать приложение</a>
-      <ul class="download-app__os">
-        <li class="download-app__os-img"><img src="/img/logo-apple.svg" width="47" height="56" alt="apple"></li>
-        <li class="download-app__os-img"><img src="/img/logo-android.svg" width="47" height="56" alt="android"></li>
-        <li class="download-app__os-img"><img src="/img/logo-microsoft.svg" width="47" height="56" alt="microsoft"></li>
-      </ul>
-      <p class="download-app__os-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-    </section>
     <section class="offer">
       <h3 class="offer__title  visually-hidden">Лучшее предложение</h3>
       <p class="offer__review">Устали от серости мегаполиса?</p>
@@ -74,6 +72,7 @@
     <section class="reviews">
       <div class="reviews__wrapper  slider">
         <h2 class="reviews__title visually-hidden">Отзывы</h2>
+        <img class="reviews__quote" src="./" alt="img" width="100" height="65">
         <ul class="reviews__list">
           <li class="reviews__item  slider__item">
             <div class="block-cell  block-cell--big">
@@ -163,5 +162,21 @@
       </p>
     </footer>
   </div>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--no-js');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
   </body>
 </html>

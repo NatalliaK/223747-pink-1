@@ -1,6 +1,6 @@
 $black: #000;
-$black-opacity: color($black a(30%));
 $grey-txt: #283645;
+$black-opacity: color($black a(30%));
 $grey-bg: #f2f2f2;
 $grey-btn: #dddfe0;
 $grey-social: #e9ebec;

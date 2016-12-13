@@ -1,13 +1,17 @@
 .photo-owner {
   @mixin line;
+
+  &--first {
+    position: relative;
+  }
 }
 
 .photo-owner__image {
   @mixin cont;
-}
 
-.photo-owner__image--big {
-  padding: 0;
+  &--big {
+    padding: 0;
+  }
 }
 
 .photo__title {
@@ -24,17 +28,14 @@
 .photo-owner__comment {
   margin: 0 20px 20px ;
   @mixin cont;
+  padding-top: 25px;
+  padding-bottom: 25px;
   @mixin bg-color $grey-bg;
   line-height: 2;
-  &::last-child {
-  margin-bottom: 0;
+
+  &:last-child {
+    margin-bottom: 0;
   }
-}
-
-/*Потом переделаю флексами*/
-
-.photo-owner--first {
-  position: relative;
 }
 
 .photo-owner__panorama {
@@ -72,40 +73,39 @@
 @media (min-width: $tab) {
   .photo__wrapper {
     @mixin cont;
-    @mixin clearfix;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .photo__title {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 100px 80px;
     font-size: 18px;
+
+    &--bottom {
+      padding-top: 54px;
+      padding-bottom: 74px;
+    }
   }
 
   .photo-owner {
-    margin-left: 10px;
-    margin-bottom: 50px;
-    float: left;
-  }
+    margin-bottom: 20px;
 
-  .photo-owner--first {
-    margin-left: 0;
-    float: none;
-  }
-
-  .photo-owner--little {
-    width: 300px;
-    height: 455px;
+    &--little {
+      width: 300px;
+    }
   }
 
   .photo-owner__image {
     padding: 0;
     width: 300px;
     height: 300px;
-  }
 
-  .photo-owner__image--big {
-    width: 700px;
-    height: 510px;
+
+    &--big {
+      width: 700px;
+      height: 510px;
+    }
   }
 
   .photo-owner__panorama {
@@ -115,24 +115,59 @@
 
   .photo-owner__comment {
     margin: 0;
+    margin-top: -3px;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &--first {
+      margin: -3px 40px 50px;
+      padding: 28px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &--little {
+      width: 242px;
+      height: 155px;
+      padding: 29px 29px 0;
+    }
   }
 
-  .photo-owner__comment--first {
-    margin: 0 40px 50px;
-    padding: 28px;
+  .photo-owner__author {
+
+    &--first {
+      order: 1;
+      width: 200px;
+    }
   }
 
-  .photo-owner__comment--little {
-    width: 242px;
-    height: 155px;
-    padding: 29px 29px 0;
+  .photo-owner__write {
+
+    &--first {
+      order: 3;
+    }
+  }
+
+  .photo-owner__like {
+    margin-top: auto;
+    padding-bottom: 30px;
+    align-self: start;
+
+    &--first {
+      order: 2;
+    }
   }
 }
 
 @media (min-width: $desc) {
   .photo__title {
     padding: 100px 300px;
+
+    &--bottom {
+  padding: 70px 250px;
+     }
   }
 
   .photo-owner__image--big {

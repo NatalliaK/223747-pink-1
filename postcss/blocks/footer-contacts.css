@@ -40,10 +40,17 @@
     font-size: 40px;
   }
 
+  .footer-contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
   .footer-contacts__item {
-    display: inline-block;
-    padding: 0 25px;
     width: 250px;
+    &:not(:last-of-type) {
+      padding-bottom: 58px;
+    }
   }
 
   .footer-contacts__map {
@@ -67,6 +74,20 @@
     img {
       width: 1200px;
       height: auto;
+    }
+  }
+
+  .footer-contacts__item {
+    &:first-of-type {
+      order: 1;
+    }
+
+    &:nth-of-type(2) {
+      order: 3;
+    }
+
+    &:nth-of-type(3) {
+      order: 2;
     }
   }
 }

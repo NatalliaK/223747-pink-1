@@ -1,5 +1,5 @@
 .download-app {
-  padding: 30px 0;
+  padding: 30px 0 38px;
   @mixin cont;
   @mixin align $cent;
   background-color: #1d2631;
@@ -21,9 +21,15 @@
   font-size: 18px;
 }
 
-.download-app__os-img {
-  padding: 38px 18px;
-  display: inline-block;
+.download-app__os {
+  margin: 33px 0 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.download-app__os-img:first-of-type {
+  margin-top: -5px;
 }
 
 .download-app__os-text {
@@ -37,18 +43,19 @@
     position: relative;
     top: -555px;
     width: 300px;
-    height: 405px;
     background-color: transparent;
   }
 
   .download-app__look {
     display: block;
-    margin: 0 40px 40px;
+    margin: 0 40px 47px;
+    line-height: 1.2em;
     @mixin font-family $font-light;
     font-size: 40px;
   }
 
   .download-app__os-text {
+    line-height: 1.5em;
     font-size: 16px;
   }
 }
@@ -60,12 +67,18 @@
   }
 
   .download-app__look {
+    margin-bottom: 60px;
     font-size: 50px;
   }
 
   .download-app__link {
     padding: 13px;
     font-size: 21px;
+  }
+
+  .download-app__os {
+    margin-top: 66px;
+    margin-bottom: 60px;
   }
 
   .download-app__os-text {

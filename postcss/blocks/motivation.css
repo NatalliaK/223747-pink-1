@@ -11,13 +11,17 @@
 
 @media (min-width: $tab) {
   .motivation {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 487px;
   }
 
   .motivation__phone {
-    height: 485px;
+    order: 1;
+    margin-top: 0;
     padding-left: 40px;
-    @mixin clearfix;
+    height: 485px;
   }
 
   .phone__smile {
@@ -28,10 +32,11 @@
 
 @media (min-width: $desc) {
   .motivation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     @mixin cont;
-    padding-bottom: 70px;
-    @mixin clearfix;
-    height: 600px;
+    height: auto;
   }
 
   .motivation__phone {
