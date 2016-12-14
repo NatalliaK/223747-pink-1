@@ -14,7 +14,6 @@
 
 @media (min-width: $tab) {
   .offer {
-    margin-top: -425px;
     padding: 20px 40px;
   }
 
@@ -26,7 +25,6 @@
 
 @media (min-width: $desc) {
   .offer {
-    margin-top: -512px;
     margin-bottom: 75px;
   }
 

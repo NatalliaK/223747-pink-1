@@ -44,6 +44,9 @@
 
 .main-nav--closed .main-nav__toggle:hover::before {
   top: 25px;
+  background-color: $pink;
+  box-shadow: 0 8px 0 0 $pink,
+  0 16px 0 0 $pink;
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
@@ -81,6 +84,7 @@
   &:hover::before,
   &:hover::after {
     top: 34px;
+    background-color: $pink;
   }
 
   &:active::before,
@@ -120,15 +124,11 @@
 
 .main-nav__item a[href] {
   &:hover {
-    background-color: $black-opacity;
-    border-top-color: $black-opacity;
+    color: $pink;
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
-
-    background-color: $black-opacity;
-    border-top-color: $black-opacity;
   }
 }
 
@@ -163,6 +163,9 @@
   .main-nav--closed .main-nav__toggle:hover::before {
     top: 44px;
     right: 40px;
+    background-color: $pink;
+    box-shadow: 0 10px 0 0 $pink,
+    0 20px 0 0 $pink;
   }
 
   .main-nav--closed .main-nav__toggle:active::before {
@@ -195,6 +198,7 @@
     &:hover::after {
       top: 56px;
       right: 40px;
+  background-color: $pink;
     }
 
     &:active::before,
@@ -261,7 +265,18 @@
 
   .main-nav__item a[href] {
     &:hover {
+      position: relative;
       color: $pink;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        left: 0;
+        height: 2px;
+        background: $pink;
+      }
     }
   }
 }

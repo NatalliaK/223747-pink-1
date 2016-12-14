@@ -183,12 +183,18 @@
 
   .form__label {
     text-indent: 60px;
+    display: flex;
 
     &--flex-cont {
-      margin-left: 65px;
-      display: flex;
+      margin-left: 60px;
+      margin-right: 60px;
       flex-wrap: wrap;
-      width: 370px;
+    }
+
+    &--span-top {
+      margin-right: 20px;
+      flex:0 0 auto;
+      height: 60px;
     }
 
     &--span {
@@ -198,10 +204,19 @@
 
     &--no-indent {
       text-indent: 0;
+      align-items: flex-end;
+    }
+
+    &--check,
+    &--radio {
+      margin-left: 60px;
+  align-items: center;
+      text-indent: 0;
     }
   }
 
   .form__input {
+    flex: 1 1 auto;
     order: 1;
     display: inline;
     margin: 37px 0 15px;
@@ -255,6 +270,7 @@
 
     &--contacts {
       display: flex;
+      padding: 0 25px;
     }
   }
 
@@ -276,14 +292,22 @@
     }
   }
 
+  .form__label {
+
+    &--radio {
+      padding-bottom: 60px;
+    }
+
+    &--flex-cont {
+      margin: 0;
+      padding-right: 35px;
+      padding-left: 35px;
+    }
+  }
+
   .form__input {
     padding: 20px;
     width: auto;
-
-    &--big {
-      display: block;
-      width: 350px;
-    }
   }
 
   .form__textarea {

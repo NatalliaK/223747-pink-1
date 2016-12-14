@@ -14,26 +14,40 @@
 
 .your-best__icons {
   position: relative;
-  @mixin align $cent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .your-best__icon {
-  padding: 0 16px 38px;
   border: none;
 }
 
-.your-best__label {
-
-  &--hidden {
-     display: none;
-  }
+.your-best__range {
+  padding: 0 18px;
 }
 
-.your-best__range {
-  position: absolute;
-  top: 65px;
-  left: 0;
-  width: 100%;
+.your-best__thumb{
+  margin-top: 38px;
+  margin-bottom: 35px;
+  border: none;
+  width: 240px;
+  height: 2px;
+  @mixin bg-color $grey-txt;
+
+  &--hidden {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 120px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    @mixin bg-color $grey-btn;
+  }
 }
 
 .your-best__btn {
@@ -70,50 +84,60 @@
 
   .your-best__icons {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     width: 275px;
+  }
+
+  .your-best__range {
+    display: flex;
+    align-items: center;
+    width: 275px;
+    height: 70px;
   }
 
   .your-best__icon {
     padding: 0;
     width: 30px;
     height: 30px;
-  }
 
-  .your-best__label {
-    padding-left: 30px;
-    width: 205px;
-    height: 30px;
-
-  &--hidden {
-     display: inline-block;
-   }
-  }
-
-  .your-best__range {
-    position: static;
-    margin-bottom: 0;
-    width: 203px;
-
-    &:first-of-type {
-      margin-top: 19px;
+    img {
+      width: 30px;
+      height: 30px;
     }
   }
 
+  .your-best__thumb {
+    margin: 0;
+    display: none;
+
+    &--hidden {
+      margin-left: 20px;
+      margin-right: 40px;
+      display: inline-flex;
+      width: 275px;
+    }
+
+    &::after {
+      left: 0;
+      width: 275px;
+    }
+  }
+
+
   .your-best__btns-wrap {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-self: flex-end;
   }
 
   .your-best__btn {
     align-self: flex-end;
     width: 260px;
-
-    &--red {
-      margin: 0;
-    }
+    margin-top: 25px;
   }
 }
 
@@ -128,8 +152,16 @@
     @mixin bg-color $grey-bg;
   }
 
+  .your-best__img {
+    padding: 0;
+  }
+
   .your-best__icons {
     width: 410px;
+  }
+
+  .your-best__range {
+    width: auto;
   }
 
   .your-best__icon {
@@ -137,22 +169,14 @@
     height: 50px;
   }
 
-  .your-best__label {
-    padding-left: 40px;
-    width: 300px;
-  }
-
-  .your-best__range {
-    width: 290px;
-  }
-
   .your-best__btns-wrap {
-    margin-bottom: 25px;
+    margin-top: 130px;
     justify-content: space-between;
     width: 100%;
   }
 
   .your-best__btn {
     width: 183px;
+    margin: 0;
   }
 }

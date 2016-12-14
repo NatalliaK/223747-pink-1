@@ -1,4 +1,14 @@
 .social-link {
   margin: 0 6px;
-  @mixin align $cent;
+  padding: 15px;
+  border: 3px solid $grey-social;
+  border-radius: 50%;
+
+  &:hover {
+  border-color: $grey-txt;
+   }
+
+   &:active {
+  border-color: $grey-opacity;
+    }
 }

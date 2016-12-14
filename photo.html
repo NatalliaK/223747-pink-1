@@ -108,18 +108,19 @@
         <div class="your-best__wrapper">
           <img  class="your-best__img" src="/img/photo-7-mobile@1x.jpg" alt="img" width="280" height="374">
           <div class="your-best__icons">
-            <button class="your-best__icon  btn" value="crop" type="button"><img src="/img/icon-editor-crop.svg" alt="crop" width="40" height="40"></button>
-            <label class="your-best__label">
-              <input class="your-best__range" type="range" name="range" id="crop" min="1" max="10" step="1">
-            </label>
-            <button class="your-best__icon  btn" value="fill" type="button"><img src="/img/icon-editor-fill.svg" alt="fill" width="40" height="40"></button>
-            <label class="your-best__label  your-best__label--hidden">
-              <input class="your-best__range" type="range" name="range" id="fill" min="1" max="10" step="1">
-            </label>
-            <button class="your-best__icon  btn" value="contrast" type="button"><img src="/img/icon-editor-contrast.svg" alt="contrast" width="35" height="35"></button>
-            <label class="your-best__label  your-best__label--hidden">
-              <input class="your-best__range" type="range" name="range" id="contacts" min="1" max="10" step="1">
-            </label>
+            <div class="your-best__range">
+              <button class="your-best__icon  btn" value="crop" type="button"><img src="/img/icon-editor-crop.svg" alt="crop" width="40" height="40"></button>
+              <hr class="your-best__thumb  your-best__thumb--hidden">
+            </div>
+            <div class="your-best__range">
+              <button class="your-best__icon  btn" value="fill" type="button"><img src="/img/icon-editor-fill.svg" alt="fill" width="40" height="40"></button>
+              <hr class="your-best__thumb  your-best__thumb--hidden">
+            </div>
+            <div class="your-best__range">
+              <button class="your-best__icon  btn" value="contrast" type="button"><img src="/img/icon-editor-contrast.svg" alt="contrast" width="35" height="35"></button>
+              <hr class="your-best__thumb  your-best__thumb--hidden">
+            </div>
+            <hr class="your-best__thumb">
             <div class="your-best__btns-wrap">
               <button class="your-best__btn  your-best__btn--red  btn" type="submit" value="Запостить">Запостить</button>
               <button class="your-best__btn  your-best__btn--grey  btn" type="reset" value="Отмена">Отмена</button>

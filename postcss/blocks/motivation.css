@@ -1,32 +1,14 @@
 .motivation {
+  padding-top: 15px;
   @mixin bg-color $grey-bg;
-}
-
-.motivation__phone {
-  margin-top: 47px;
-  height: 280px;
-  overflow: hidden;
-  @mixin align $cent;
 }
 
 @media (min-width: $tab) {
   .motivation {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: flex-end;
     height: 487px;
-  }
-
-  .motivation__phone {
-    order: 1;
-    margin-top: 0;
-    padding-left: 40px;
-    height: 485px;
-  }
-
-  .phone__smile {
-    width: 270px;
-    height: 485px;
   }
 }
 
