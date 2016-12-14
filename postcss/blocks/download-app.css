@@ -25,9 +25,9 @@
     @mixin bg-color $white;
   }
 
-   &:active {
-  color: $pink-opacity;
-    }
+  &:active {
+    color: $pink-opacity;
+  }
 }
 
 .download-app__os {

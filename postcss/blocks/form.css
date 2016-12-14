@@ -259,8 +259,8 @@
     width: 435px;
 
     &:first-of-type {
-  border: none;
-     }
+      border: none;
+    }
 
     &--big {
       margin-left: 0;

@@ -31,12 +31,12 @@
 
   &:hover {
     color: $grey-txt;
-     text-decoration: underline;
-   }
+    text-decoration: underline;
+  }
 
-   &:active {
-  color: $grey-opacity;
-    }
+  &:active {
+    color: $grey-opacity;
+  }
 }
 
 .footer-contacts__map {

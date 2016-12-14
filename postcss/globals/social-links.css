@@ -5,10 +5,10 @@
   border-radius: 50%;
 
   &:hover {
-  border-color: $grey-txt;
-   }
+    border-color: $grey-txt;
+  }
 
-   &:active {
-  border-color: $grey-opacity;
-    }
+  &:active {
+    border-color: $grey-opacity;
+  }
 }
