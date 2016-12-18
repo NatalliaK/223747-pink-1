@@ -1,5 +1,5 @@
 .page-header__bg--index {
-  height: 400px;
+  height: 395px;
   background-image: url("/img/iphone-hand-mobile@1x.png"), url("/img/bg-back-mobile@1x.jpg");
   background-position: bottom left, center;
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@
 
 @media (min-width: $tab) {
   .page-header__bg--index {
-    height: 620px;
+    height: 618px;
     background-size: auto 500px, auto 770px;
     background-position: bottom left 190px, bottom center;
   }

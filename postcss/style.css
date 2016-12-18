@@ -1,8 +1,9 @@
 @import "variables.css";
 @import "mixins.css";
+@import "globals/fonts.css";
 @import "globals/total.css";
 @import "globals/visually-hidden.css";
-@import "globals/fonts.css";
+@import "globals/btn.css";
 @import "globals/html.css";
 @import "globals/main-nav.css";
 @import "globals/page-header.css";

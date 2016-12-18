@@ -4,7 +4,8 @@
 }
 
 .footer-contacts__wrapper-text {
-  padding: 46px 0;
+  padding: 47px 0 34px;
+  line-height: 2em;
 }
 
 .footer-contacts__text {
@@ -18,7 +19,7 @@
 }
 
 .footer-contacts__item {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   @mixin font-family $font-bold;
   font-size: 18px;
 }
@@ -45,11 +46,17 @@
 }
 
 @media (min-width: $tab) {
+  .footer-contacts__wrapper-text {
+    padding-top: 58px;
+  }
+
   .footer-contacts__text {
+    padding-bottom: 20px;
     font-size: 40px;
   }
 
   .footer-contacts__list {
+    padding-bottom: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -57,8 +64,9 @@
 
   .footer-contacts__item {
     width: 250px;
+
     &:not(:last-of-type) {
-      padding-bottom: 58px;
+      padding-bottom: 48px;
     }
   }
 
@@ -73,7 +81,12 @@
 }
 
 @media (min-width: $desc) {
+  .footer-contacts__wrapper-text {
+    padding-top: 80px;
+  }
+
   .footer-contacts__text {
+    padding-bottom: 32px;
     font-size: 50px;
   }
 
@@ -86,7 +99,16 @@
     }
   }
 
+  .footer-contacts__list {
+    margin-top: 8px;
+  }
+
   .footer-contacts__item {
+    padding-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     &:first-of-type {
       order: 1;
     }
@@ -98,5 +120,9 @@
     &:nth-of-type(3) {
       order: 2;
     }
+  }
+
+  .footer-contacts__span {
+    padding-bottom: 20px;
   }
 }

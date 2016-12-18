@@ -31,22 +31,22 @@
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 5px;
-  right: 20px;
+  top: 2px;
+  right: 19px;
 
   width: 50px;
-  height: 2px;
+  height: 3px;
 
   background-color: #ffffff;
-  box-shadow: 0 8px 0 0 #ffffff,
-  0 16px 0 0 #ffffff;
+  box-shadow: 0 10px 0 0 #ffffff,
+  0 20px 0 0 #ffffff;
 }
 
 .main-nav--closed .main-nav__toggle:hover::before {
-  top: 25px;
+  top: 22px;
   background-color: $pink;
-  box-shadow: 0 8px 0 0 $pink,
-  0 16px 0 0 $pink;
+  box-shadow: 0 10px 0 0 $pink,
+  0 20px 0 0 $pink;
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
@@ -63,11 +63,11 @@
   &::after {
     content: "";
     position: absolute;
-    right: 20px;
-    top: 14px;
+    right: 15px;
+    top: 10px;
 
     width: 30px;
-    height: 2px;
+    height: 4px;
 
     background-color: #ffffff;
   }
@@ -83,13 +83,14 @@
 
   &:hover::before,
   &:hover::after {
-    top: 34px;
+    top: 30px;
+  right: 14px;
     background-color: $pink;
   }
 
   &:active::before,
   &:active::after {
-    top: 34px;
+    top: 30px;
     background-color: rgba(255, 255, 255, 0.3);
   }
 }
@@ -107,7 +108,7 @@
 }
 
 .main-nav__item {
-  line-height: 62px;
+  line-height: 63px;
 
   a {
     @mixin align $cent;
@@ -119,6 +120,7 @@
     box-shadow: inset 0 -1px 0 0 $black;
     @mixin upp;
     @mixin font-family $font-bold;
+    font-size: 18px;
   }
 }
 
@@ -179,9 +181,9 @@
   .main-nav--opened .main-nav__toggle {
     &::before,
     &::after {
-      top: 12px;
-      right: 0;
-      width: 35px;
+      top: 9px;
+      right: -5px;
+      width: 33px;
       height: 4px;
     }
 
@@ -196,17 +198,22 @@
 
     &:hover::before,
     &:hover::after {
-      top: 56px;
-      right: 40px;
+      top: 53px;
+      right: 35px;
   background-color: $pink;
     }
 
     &:active::before,
     &:active::after {
-      top: 56px;
-      right: 40px;
+      top: 53px;
+      right: 35px;
       background-color: rgba(255, 255, 255, 0.3);
     }
+  }
+
+  .main-nav__item {
+    height: 64px;
+    line-height: 64px;
   }
 }
 
@@ -240,6 +247,7 @@
 
   .main-nav__item {
     z-index: 3;
+    height: 110px;
     line-height: 110px;
 
     &--active {

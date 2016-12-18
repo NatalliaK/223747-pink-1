@@ -7,7 +7,7 @@
   box-shadow: inset 0 -1px 0 0 $black;
 
   img {
-    vertical-align: middle;
+    margin-bottom: -5px;
   }
 }
 
@@ -17,22 +17,28 @@
 }
 
 .page-header__title {
-  padding-top: 35px;
+  padding-top: 28px;
   @mixin font-family $font-light;
+  font-weight: normal;
   font-size: 24px;
   @mixin align $cent;
   vertical-align: middle;
+  line-height: 1.25;
   color: $white;
+
+  &--photo {
+    padding-top: 26px;
+  }
 }
 
 @media (min-width: $tab) {
   .page-header__top-block {
-    height: 110px;
-    line-height: 110px;
+    height: 106px;
+    line-height: 106px;
   }
 
   .page-header__title {
-    padding-top: 50px;
+    padding-top: 70px;
     font-size: 50px;
   }
 }
@@ -48,7 +54,7 @@
   }
 
   .page-header__title {
-    padding-top: 170px;
+    padding-top: 173px;
   }
 
   .page-header {

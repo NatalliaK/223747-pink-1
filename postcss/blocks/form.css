@@ -1,5 +1,5 @@
 .form__desc {
-  padding: 54px 20px 52px;
+  padding: 49px 20px 43px;
   line-height: 2;
   @mixin line;
   @mixin align $cent;
@@ -17,14 +17,25 @@
   border: none;
 
   &--grey {
-    margin-bottom: 41px;
     padding: 0;
     @mixin bg-color $grey-bg;
+  }
+
+  &--name {
+    padding-bottom: 20px;
+  }
+
+  &--contacts {
+    padding-bottom: 20px;
+  }
+
+  &--check {
+    margin-bottom: 38px;
   }
 }
 
 .form__legend {
-  padding: 40px 40px;
+  padding: 40px 27px;
   @mixin align $cent;
   @mixin upp;
   color: $pink;
@@ -34,9 +45,17 @@
     display: none;
   }
 
+  &--progress {
+    padding-top: 35px;
+  padding-bottom: 45px;
+  }
+
+   &--os {
+  padding-top: 35px;
+    }
+
   &--textarea {
-    padding: 0;
-    padding-bottom: 20px;
+    padding: 40px 0 17px;
     @mixin bg-color $white;
   }
 }
@@ -54,36 +73,80 @@
   }
 
   &--check {
-    padding-bottom: 43px;
+    padding-bottom: 58px;
+
+  &:last-of-type {
+  padding-bottom: 50px;
+   }
   }
 
   &--radio {
-    padding-bottom: 37px;
+    padding-bottom: 53px;
+
+    &:last-of-type {
+      padding-bottom: 46px;
+    }
   }
 }
 
 .form__input {
-  margin: 15px 0 24px;
-  padding: 24px 0 24px 23px;
+  margin: 12px 0 23px;
+  padding: 18px 0 18px 21px;
   display: block;
   width: 257px;
+  border: 2px solid $grey-line;
   font-size: 18px;
 }
 
+/*Код продублирован, потому что вместе эти 2 свойства не работают*/
+
+input {
+&::-webkit-input-placeholder {
+   color: $grey-txt;
+ @mixin font-family $font-regular;
+   font-size: 18px;
+ }
+
+&:-moz-placeholder {
+   color: $grey-txt;
+ @mixin font-family $font-regular;
+   font-size: 18px;
+ }
+}
+
 .form__check {
-  margin-right: 31px;
+  margin-right: 55px;
 }
 
 .form__radio {
-  margin-right: 31px;
+  margin-right: 52px;
 }
 
 .form__textarea {
   width: 240px;
-  height: 160px;
-  padding: 20px;
+  height: 170px;
+  padding: 13px 20px;
+  border: 2px solid $grey-line;
   @mixin font-family $font-regular;
   font-size: 18px;
+}
+
+/*Код продублирован, потому что вместе эти 2 свойства не работают*/
+
+textarea {
+  &::-webkit-input-placeholder {
+    line-height: 1.6;
+    color: $grey-txt;
+    @mixin font-family $font-regular;
+    font-size: 18px;
+  }
+
+  &:-moz-placeholder {
+    line-height: 1.6;
+    color: $grey-txt;
+    @mixin font-family $font-regular;
+    font-size: 18px;
+  }
 }
 
 .form__footer {
@@ -92,9 +155,9 @@
 }
 
 .form__desc-footer {
-  padding: 45px 0 25px;
+  padding: 39px 0 25px;
   color: $ pink;
-@mixin upp;
+  @mixin upp;
 
   &--black {
     color: $ grey-txt;
@@ -114,7 +177,8 @@
   }
 
   .form__desc {
-    padding: 100px 40px 70px;
+    padding: 95px 40px 31px;
+    line-height: 1.7;
     font-size: 18px;
 
     &--hidden {
@@ -124,35 +188,39 @@
 
   .form__fieldset {
     padding: 0;
-    margin-bottom: 60px;
-    border: 2px solid $grey-line;
+    margin-bottom: 20px;
+    border: 3px solid $grey-line;
 
-    &:first-of-type {
+    &--name {
+      margin-bottom: 0;
       order: 1;
     }
 
-    &:nth-of-type(2) {
+    &--os {
+      margin-top: 3px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      order: 2;
+    }
+
+    &--check {
       display: flex;
       flex-flow: column wrap;
       order: 4;
     }
 
-    &:nth-of-type(3) {
-      padding-bottom: 24px;
+    &--grey {
+      @mixin bg-color $white;
+    }
+
+    &--contacts {
+      padding: 0 55px;
       order: 3;
     }
 
-    &:nth-of-type(4) {
-      order: 2;
-    }
-
-    &:nth-of-type(5) {
+    &--textarea {
+      margin-bottom: 60px;
       order: 5;
-      padding: 0 60px;
-    }
-
-    &--grey {
-      @mixin bg-color $white;
     }
   }
 
@@ -161,14 +229,17 @@
 
     &--os {
       margin-left: 105px;
+      padding-bottom: 52px;
     }
 
     &--contacts {
       margin-left: 160px;
+      padding: 40px 27px 35px;
     }
 
     &--progress {
       margin-left: 80px;
+      margin-bottom: 7px;
     }
 
     &--hidden {
@@ -186,18 +257,17 @@
     display: flex;
 
     &--flex-cont {
-      margin-left: 60px;
-      margin-right: 60px;
       flex-wrap: wrap;
     }
 
     &--span-top {
-      margin-right: 20px;
+      margin-right: 13px;
       flex:0 0 auto;
-      height: 60px;
+      height: 57px;
     }
 
     &--span {
+      margin-bottom: 34px;
       order: 2;
       text-indent: 20px;
     }
@@ -209,32 +279,50 @@
 
     &--check,
     &--radio {
-      margin-left: 60px;
-  align-items: center;
+      margin-left: 70px;
+      align-items: center;
       text-indent: 0;
+    }
+
+    &--contacts {
+      flex-basis: 500px;
     }
   }
 
   .form__input {
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     order: 1;
     display: inline;
-    margin: 37px 0 15px;
+    margin: 37px 0 13px;
     padding: 20px 0 20px 20px;
-    width: 500px;
+
+    &--contacts {
+      margin: 0 0 13px;
+    }
+  }
+
+  .form__check {
+    margin-right: 35px;
+  }
+
+  .form__radio {
+    margin-right: 33px;
   }
 
   .form__textarea {
-    margin-bottom: 55px;
-    width: 460px;
-    height: 190px;
+    margin-bottom: 45px;
+    margin-left: 57px;
+    width: 457px;
+    height: 164px;
   }
 
   .form__footer {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     order: 6;
+    height: 70px;
   }
 }
 
@@ -246,8 +334,7 @@
   }
 
   .form__desc {
-    padding-left: 90px;
-    padding-right: 90px;
+    padding: 95px 90px 33px;
 
     &--hidden {
       display: inline-block;
@@ -256,46 +343,75 @@
 
   .form__fieldset {
     padding-left: 0;
-    width: 435px;
+    width: 432px;
 
     &:first-of-type {
       border: none;
     }
 
+    &--os {
+      padding-bottom: 18px;
+    }
+
     &--big {
       margin-left: 0;
-      width: 100%;
-      height: 250px;
-    }
-
-    &--contacts {
+      margin-top: 5px;
+      margin-bottom: 0;
+      padding: 0 20px;
       display: flex;
-      padding: 0 25px;
+      flex-wrap: wrap;
+      flex: 0 0 900px;
     }
-  }
 
-  .form__legend {
-    &--os {
-      margin-left: 15px;
+    &--check {
+      margin-bottom: 19px;
+      padding-bottom: 10px;
     }
 
     &--contacts {
-      margin-left: 300px;
-    }
 
-    &--progress {
-      margin-left: 240px;
     }
 
     &--textarea {
-      margin-left: 300px;
+      width: 100%;
     }
   }
+
+  .form__wrapper-inner {
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+    .form__legend {
+      &--os {
+        margin-left: 24px;
+        padding: 33px 30px;
+      }
+
+      &--contacts {
+        margin-left: 316px;
+        padding: 33px 27px;
+      }
+
+      &--progress {
+        margin-left: 233px;
+        margin-bottom: 0;
+        padding: 36px 27px;
+      }
+
+      &--textarea {
+        margin-left: 335px;
+        padding: 37px 40px;
+      }
+    }
 
   .form__label {
 
     &--radio {
-      padding-bottom: 60px;
+      margin-left: 90px;
+      padding: 20px 0 30px;
     }
 
     &--flex-cont {
@@ -303,20 +419,53 @@
       padding-right: 35px;
       padding-left: 35px;
     }
+
+    &--span-top {
+      margin-right: 17px;
+    }
+
+    &--contacts {
+      flex: 0 0 375px;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: auto;
+    }
+
+    &--check {
+      margin-left: 53px;
+      padding: 17px 0 40px;
+      flex-basis: 247px;
+    }
   }
 
   .form__input {
+    margin-top: 37px;
     padding: 20px;
-    width: auto;
+
+    &--contacts {
+      margin-top: 0;
+      width: auto;
+      flex-basis: 320px;
+    }
+  }
+
+  .form__label--no-indent:first-child>input {
+     margin-top: 50px;
+   }
+
+  .form__check {
+    margin-right: 29px;
   }
 
   .form__textarea {
-    padding: 0;
-    width: 815px;
-    height: 130px;
+    padding: 15px 20px;
+    width: 775px;
+    height: 90px;
   }
 
   .form__desc-footer {
+    padding: 0;
+    padding-top: 4px;
     width: 960px;
 
     &--hidden {
