@@ -30,8 +30,8 @@
   font-size: 18px;
 
   &--last {
-  padding-top: 24px;
-   }
+    padding-top: 24px;
+  }
 }
 
 .block-cell__review {

@@ -50,9 +50,9 @@
   padding-bottom: 45px;
   }
 
-   &--os {
-  padding-top: 35px;
-    }
+  &--os {
+    padding-top: 35px;
+  }
 
   &--textarea {
     padding: 40px 0 17px;
@@ -76,9 +76,9 @@
     padding-bottom: 58px;
 
   &:last-of-type {
-  padding-bottom: 50px;
-   }
+    padding-bottom: 50px;
   }
+}
 
   &--radio {
     padding-bottom: 53px;
@@ -101,17 +101,17 @@
 /*Код продублирован, потому что вместе эти 2 свойства не работают*/
 
 input {
-&::-webkit-input-placeholder {
-   color: $grey-txt;
- @mixin font-family $font-regular;
-   font-size: 18px;
- }
+  &::-webkit-input-placeholder {
+    color: $grey-txt;
+    @mixin font-family $font-regular;
+    font-size: 18px;
+  }
 
-&:-moz-placeholder {
-   color: $grey-txt;
- @mixin font-family $font-regular;
-   font-size: 18px;
- }
+  &:-moz-placeholder {
+    color: $grey-txt;
+    @mixin font-family $font-regular;
+    font-size: 18px;
+  }
 }
 
 .form__check {
@@ -450,8 +450,8 @@ textarea {
   }
 
   .form__label--no-indent:first-child>input {
-     margin-top: 50px;
-   }
+    margin-top: 50px;
+  }
 
   .form__check {
     margin-right: 29px;
