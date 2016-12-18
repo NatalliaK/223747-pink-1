@@ -9,20 +9,28 @@
 }
 
 .popup__title {
-  padding-top: 45px;
-  @mixin font-family $font-regular;
+  padding-top: 50px;
+  @mixin font-family $font-bold;
   font-size: 18px;
   @mixin bg-color $white;
+
+  &--failed {
+    padding-top: 41px;
+  }
 }
 
 .popup__text {
-  padding: 38px 20px 42px;
-  line-height: 2;
+  padding: 25px 25px 31px;
+  line-height: 1.7;
   @mixin bg-color $white;
+
+  &--failed {
+    padding: 25px 0 28px;
+  }
 }
 
 .popup__btn--grey-bg {
-  margin: 48px 20px 0;
+  margin: 51px 20px 0;
   width: 280px;
 }
 
@@ -32,28 +40,48 @@
     width: 460px;
   }
 
-  .popup--big {
-    width: 780px;
-  }
-
   .popup__title {
-    padding: 45px 110px;
+    padding: 45px 110px 25px;
     @mixin font-family font-bold;
     font-size: 30px;
+    letter-spacing: 0.8px;
+    line-height: 1.2;
   }
 
   .popup__text {
-    padding: 0 70px 40px;
-    line-height: 1.5em;
+    padding: 0 70px 35px;
+    line-height: 1.4;
     font-size: 18px;
   }
 
-  .popup__text--big {
-    padding-right: 160px;
-    padding-left: 160px;
+  .popup__btn--grey-bg {
+    margin-top: 44px;
   }
 
   .popup__btn--grey-bg {
-    width: 460px;
+    width: 300px;
   }
+}
+
+@media (min-width: $desc) {
+  .popup {
+
+    &--big {
+      width: 780px;
+    }
+  }
+
+  .popup__text {
+
+    &--big {
+      padding: 0 170px 35px;
+    }
+  }
+
+    .popup__btn {
+
+      &--grey-bg {
+        width: 460px;
+    }
+}
 }

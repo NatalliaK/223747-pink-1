@@ -1,37 +1,27 @@
 .motivation {
+  padding-top: 45px;
   @mixin bg-color $grey-bg;
-}
-
-.motivation__phone {
-  margin-top: 47px;
-  height: 280px;
-  overflow: hidden;
-  @mixin align $cent;
 }
 
 @media (min-width: $tab) {
   .motivation {
-    height: 487px;
-  }
-
-  .motivation__phone {
-    height: 485px;
-    padding-left: 40px;
-    @mixin clearfix;
-  }
-
-  .phone__smile {
-    width: 270px;
-    height: 485px;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    height: 435px;
+    overflow: hidden;
   }
 }
 
 @media (min-width: $desc) {
   .motivation {
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     @mixin cont;
-    padding-bottom: 70px;
-    @mixin clearfix;
-    height: 600px;
+    height: auto;
   }
 
   .motivation__phone {

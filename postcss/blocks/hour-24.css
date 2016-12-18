@@ -5,30 +5,39 @@
 
 @media (min-width: $tab) {
   .hour-24 {
-    display: block;
-    @mixin cont;
+    padding-top: 60px;
+    margin-bottom: 70px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
     img {
-      float: left;
-      margin-right: 60px;
       border: 1px solid #ccc;
-      @mixin clearfix;
     }
   }
 
   .hour-24__right-block {
+    flex-basis: 310px;
+    flex-grow: 1;
+    margin-left: 52px;
+    margin-top: -15px;
     padding: 0 10px;
-    line-height: 2em;
   }
 
   .hour-24__title {
+    padding-bottom: 11px;
+    padding-right: 213px;
+    line-height: 1.2em;
+    @mixin font-family $font-bold;
     font-size: 30px;
-    line-height: 1.3em;
-    padding-bottom: 24px;
   }
 
   .hour-24__text {
-    padding-right: 70px;
-    padding-bottom: 10px;
+    padding-right: 80px;
+    padding-bottom: 16px;
+    line-height: 1.7em;
   }
 
   .hour-24__link {
@@ -39,18 +48,32 @@
 
 @media (min-width: $desc) {
   .hour-24 {
-    padding-bottom: 65px;
-    height: 415px;
+    margin-bottom: 60px;
+    padding-bottom: 45px;
+    width: 940px;
     @mixin bg-color $grey-bg;
     img {
-      margin-right: 70px;
-      width: 315px;
+      margin-right: 8px;
+      width: 350px;
       height: 372px;
     }
   }
 
   .hour-24__right-block {
-    padding-top: 100px;
+    margin: 0;
+    margin-top: 21px;
+    flex-basis: 570px;
     font-size: 18px;
+  }
+
+  .hour-24__title {
+    padding-right: 0;
+    padding-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .hour-24__text {
+    padding-right: 43px;
+    padding-bottom: 32px;
   }
 }

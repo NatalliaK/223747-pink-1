@@ -6,13 +6,8 @@
 .wrapper {
   width: 320px;
   margin: 0 auto;
+  @mixin font-family $font-regular;
   color: $grey-txt;
-  @media (min-width: $tab) {
-    width: 700px;
-  }
-  @media (min-width: $desc) {
-    width: 1200px;
-  }
 }
 
 li {
@@ -25,4 +20,16 @@ a {
 
 .btn {
   box-shadow: none;
+}
+
+  @media (min-width: $tab) {
+    .wrapper {
+      width: 700px;
+    }
+  }
+
+  @media (min-width: $desc) {
+    .wrapper {
+    width: 1200px;
+  }
 }

@@ -1,20 +1,14 @@
 .page-header__top-block {
   position: relative;
   @mixin cont;
-  height: 70px;
-  line-height: 70px;
+  height: 67px;
+  line-height: 67px;
   border: 1px solid #485461;
   box-shadow: inset 0 -1px 0 0 $black;
 
   img {
-    vertical-align: middle;
+    margin-bottom: -5px;
   }
-}
-
-.main-nav__toggle {
-  position: absolute;
-  right: 20px;
-  top: 20px;
 }
 
 .page-header__bg {
@@ -23,22 +17,28 @@
 }
 
 .page-header__title {
-  padding-top: 35px;
+  padding-top: 28px;
   @mixin font-family $font-light;
+  font-weight: normal;
   font-size: 24px;
   @mixin align $cent;
   vertical-align: middle;
+  line-height: 1.25;
   color: $white;
+
+  &--photo {
+    padding-top: 26px;
+  }
 }
 
 @media (min-width: $tab) {
   .page-header__top-block {
-    height: 110px;
-    line-height: 110px;
+    height: 106px;
+    line-height: 106px;
   }
 
   .page-header__title {
-    padding-top: 50px;
+    padding-top: 70px;
     font-size: 50px;
   }
 }
@@ -46,18 +46,19 @@
 @media (min-width: $desc) {
   .page-header__top-block {
     display: inline-block;
-    height: 107px;
-    line-height: 107px;
+    height: 110px;
+    line-height: 110px;
     float: left;
-    margin-left: 120px;
+    margin-left: 130px;
     padding: 0;
   }
 
-  .page-header__bg {
-    position: relative;
+  .page-header__title {
+    padding-top: 173px;
   }
 
-  .page-header__title {
-    padding-top: 170px;
+  .page-header {
+    display: flex;
+    flex-direction: column;
   }
 }

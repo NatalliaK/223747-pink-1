@@ -1,11 +1,28 @@
 .reviews {
+  padding-top: 10px;
   @mixin line;
+}
+
+.reviews__quote {
+  display: none;
+}
+
+@media (min-width: $tab) {
+  .reviews__toggles {
+    padding-bottom: 18px;
+  }
 }
 
 @media (min-width: $desc) {
   .reviews {
+    margin-bottom: 43px;
     @mixin cont;
-    height: 415px;
+  }
+
+  .reviews__quote {
+    margin: 0 auto;
+    display: block;
+    @mixin line;
   }
 
   .reviews__toggles {

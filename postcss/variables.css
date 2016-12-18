@@ -1,11 +1,13 @@
 $black: #000;
-$black-opacity: color($black a(30%));
 $grey-txt: #283645;
+$black-opacity: color($black a(30%));
+$grey-opacity: color($grey-txt a(30%));
 $grey-bg: #f2f2f2;
 $grey-btn: #dddfe0;
 $grey-social: #e9ebec;
 $grey-line: #e5e5e5;
 $pink: #d22856;
+$pink-opacity: color($pink a(30%));
 $green: #2aab6d;
 $white: #fff;
 $cent: center;

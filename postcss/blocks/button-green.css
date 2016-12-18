@@ -1,12 +1,18 @@
 .button-green {
   width: 100%;
-  padding: 25px;
+  padding: 20px;
   border: none;
   color: $white;
   @mixin font-family $font-bold;
   font-size: 18px;
   @mixin upp;
   @mixin bg-color $green;
+
+  &--failed {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 280px;
+  }
 }
 
 @media (min-width: $tab) {

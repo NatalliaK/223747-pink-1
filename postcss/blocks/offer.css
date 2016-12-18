@@ -1,11 +1,12 @@
 .offer {
-  margin: 30px 0 20px;
+  margin: 20px 0 23px;
   @mixin cont;
   @mixin line;
 }
 
 .offer__review {
-  padding: 20px;
+  padding: 20px 0 7px;
+  line-height: 1.25em;
   @mixin font-family $font-light;
   font-size: 24px;
   @mixin align $cent;
@@ -13,19 +14,20 @@
 
 @media (min-width: $tab) {
   .offer {
-    margin-top: -405px;
+    padding: 27px 40px 20px;
   }
 
   .offer__review {
-    padding: 20px 10px;
+    padding: 0 10px;
     font-size: 40px;
   }
 }
 
 @media (min-width: $desc) {
   .offer {
-    margin-top: -512px;
+    margin-top: 25px;
     margin-bottom: 75px;
+    padding: 0;
   }
 
   .offer__review {
