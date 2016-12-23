@@ -5,30 +5,42 @@
 
 @media (min-width: $tab) {
   .hour-24 {
-    padding-top: 60px;
-    margin-bottom: 70px;
+    position: relative;
+    padding-top: 25px;
+    margin-bottom: 30px;
     width: 700px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  .hour-24__pict {
+    width: 239px;
+  }
 
-    img {
-      border: 1px solid #ccc;
-    }
+  .hour-24__round-24 {
+    position: absolute;
+    top: 113px;
+    left: 59px;
+    z-index: 3;
+    padding: 20px 37px 30px 33px;
+    color: $pink;
+    font-size: 90px;
+    @mixin font-family $font-regular;
+    border: 15px solid $pink;
+    border-radius: 50%;
   }
 
   .hour-24__right-block {
     flex-basis: 310px;
     flex-grow: 1;
-    margin-left: 52px;
+    margin-left: 60px;
     margin-top: -15px;
     padding: 0 10px;
   }
 
   .hour-24__title {
-    padding-bottom: 11px;
-    padding-right: 213px;
+    padding: 18px 213px 11px 0;
     line-height: 1.2em;
     @mixin font-family $font-bold;
     font-size: 30px;
@@ -49,19 +61,27 @@
 @media (min-width: $desc) {
   .hour-24 {
     margin-bottom: 60px;
-    padding-bottom: 45px;
+    padding-bottom: 65px;
     width: 940px;
     @mixin bg-color $grey-bg;
-    img {
-      margin-right: 8px;
-      width: 350px;
-      height: 372px;
+
+    svg {
+      margin-left: -4px;
+      margin-top: 40px;
+      width: 315px;
     }
   }
 
+  .hour-24__round-24 {
+    top: 132px;
+    left: 155px;
+    padding: 25px 42px 35px 37px;
+    border-width: 20px;
+    font-size: 115px;
+  }
+
   .hour-24__right-block {
-    margin: 0;
-    margin-top: 21px;
+    margin: 61px 0 0 55px;
     flex-basis: 570px;
     font-size: 18px;
   }

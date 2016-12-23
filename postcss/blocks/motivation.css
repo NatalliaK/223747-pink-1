@@ -1,26 +1,27 @@
 .motivation {
-  padding-top: 45px;
+  position: relative;
+  padding-top: 65px;
   @mixin bg-color $grey-bg;
 }
 
 @media (min-width: $tab) {
   .motivation {
-    padding-top: 50px;
+    position: relative;
+    padding-top: 73px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    height: 435px;
+    height: 413px;
     overflow: hidden;
   }
 }
 
 @media (min-width: $desc) {
   .motivation {
-    padding-top: 0;
+    padding: 0 138px 0 130px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    @mixin cont;
     height: auto;
   }
 

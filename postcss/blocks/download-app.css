@@ -1,5 +1,5 @@
 .download-app {
-  padding: 29px 0;
+  padding: 28px 0;
   @mixin cont;
   @mixin align $cent;
   background-color: #1d2631;
@@ -38,8 +38,23 @@
   justify-content: space-around;
 }
 
-.download-app__os-img:first-of-type {
-  margin-top: -5px;
+.download-app__os-img {
+
+  &:first-of-type {
+    margin-top: -4px;
+    margin-left: 0;
+    width: 45px;
+  }
+
+  &:nth-of-type(2) {
+    margin-top: -1px;
+    margin-right: 1px;
+  }
+
+  &:nth-of-type(3) {
+    margin-top: 5px;
+    margin-right: 0;
+  }
 }
 
 .download-app__os-text {
@@ -51,7 +66,7 @@
 @media (min-width: $tab) {
   .download-app {
     position: relative;
-    margin-top: -555px;
+    margin-top: -553px;
     margin-bottom: 100px;
     width: 300px;
     background-color: transparent;
@@ -70,11 +85,25 @@
   }
 
   .download-app__os {
-    margin: 55px 0 30px;
+    margin: 55px 0 33px;
   }
 
   .download-app__os-img {
 
+    &:first-of-type {
+      margin-top: -8px;
+      margin-left: 14px;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: -6px;
+      margin-right: 0;
+    }
+
+    &:nth-of-type(3) {
+      margin-top: 2px;
+      margin-right: 10px;
+    }
   }
 
   .download-app__os-text {
@@ -103,7 +132,7 @@
 
   .download-app__os {
     margin-top: 75px;
-    margin-bottom: 44px;
+    margin-bottom: 46px;
   }
 
   .download-app__os-text {

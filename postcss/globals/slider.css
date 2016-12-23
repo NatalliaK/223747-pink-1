@@ -1,8 +1,49 @@
 .slider__toggles {
-  padding: 35px 0;
+  padding: 35px 0 35px;
 @mixin align $cent;
 }
 
 .slider__toggle {
   padding: 0 5px;
+
+  &--active {
+  width: 5px;
+     height: 5px;
+
+   }
 }
+
+.slider__input {
+  visibility: hidden;
+  position:relative;
+
+  &::before {
+    position: absolute;
+    top:3px;
+    left: 2px;
+    visibility: visible;
+    content: "";
+    border: 3px solid #bec2c7;
+    border-radius: 50%;
+  }
+
+    &:hover:before {
+    border-color: #7e868f;
+    }
+
+    &:active:before {
+    opacity: 0.3;
+    }
+
+    &--active::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      visibility: visible;
+      content: "";
+      border: 3px solid $grey-txt;
+      border-radius: 50%;
+    }
+  }

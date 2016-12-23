@@ -1,21 +1,90 @@
+.rate {
+  position: relative;
+}
+
 .rate__wrapper {
-  padding-top: 92px;
+  position: relative;
+  padding-top: 94px;
   @mixin line;
   @mixin bg-color $grey-bg;
   @mixin upp;
+
+    &::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 141px;
+    left: -29px;
+    width: 100px;
+    height: 1px;
+    @mixin bg-color $grey-line;
+    transform: rotate(90deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 141px;
+    left: 249px;
+    width: 100px;
+    height: 1px;
+    @mixin bg-color $grey-line;
+    transform: rotate(90deg);
+  }
 }
 
 .rate__table-row-head {
   @mixin cont;
   @mixin bg-color #283645;
   color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 192px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    @mixin bg-color $grey-line;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 192px;
+    left: 220px;
+    width: 100px;
+    height: 2px;
+    @mixin bg-color $grey-line;
+  }
 }
 
 .rate__table-cell-head {
   @mixin align $cent;
   &--no-vis {
-    display: none;
+     display: none;
+   }
+
+  &--hit {
+    position: relative;
+
+  &::before {
+    position: absolute;
+    visibility: visible;
+    z-index: 8;
+    top: 17px;
+    left: 10px;
+    content: "хит";
+    font-size: 15px;
+    color: $white;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
   }
+}
+
 }
 
 .rate__title {
@@ -25,8 +94,31 @@
 }
 
 .rate__table-row {
+  position: relative;
   @mixin cont;
   @mixin bg-color $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 60px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    @mixin bg-color $grey-line;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 60px;
+    left: 220px;
+    width: 100px;
+    height: 2px;
+    @mixin bg-color $grey-line;
+  }
 }
 
 .rate__price {
@@ -35,14 +127,47 @@
   font-size: 24px;
 }
 
+.rate__hit {
+  position: absolute;
+
+  &--mobile {
+    content: "";
+    visibility: visible;
+    left: 0;
+  }
+
+  &--tablet {
+    display: none;
+  }
+}
+
 .rate__table-cell {
+  position: relative;
   margin-bottom: -2px;
   padding: 19px 0 20px 22px;
   border: 2px solid $grey-line;
+
   &--no-vis {
     display: none;
   }
 }
+
+.rate__yes,
+.rate__no {
+  position: absolute;
+  display: inline-block;
+  width: 23px;
+  left: 231px;
+}
+
+.rate__yes {
+  fill: $green;
+}
+
+.rate__no {
+  fill: $pink;
+}
+
 .rate__toggles {
   padding: 40px 0;
 }
@@ -57,14 +182,26 @@
 
   .rate__wrapper {
     display: table;
+    margin-left: 3px;
     width: 620px;
     border-collapse: collapse;
+
+    &::after,
+    &::before {
+      visibility: hidden;
+    }
   }
 
   .rate__table-row-head {
     display: table-row;
-    :last-child {
+
+    &:last-child {
       border: none;
+    }
+
+    &::after,
+    &::before {
+      visibility: hidden;
     }
   }
 
@@ -72,6 +209,7 @@
     padding: 0 20px;
     display: table-cell;
     border-right: 2px solid $grey-bg;
+
     &--empty {
       @mixin bg-color $grey-bg;
     }
@@ -89,14 +227,61 @@
 
   .rate__table-row {
     display: table-row;
+
+    &::after,
+    &::before {
+      visibility: hidden;
+    }
   }
 
   .rate__table-cell {
     display: table-cell;
     padding: 12px 15px;
-    width: 155px;
+    width: 134px;
     text-transform: none;
+
+    &--first-col {
+  width: 123px;
+     }
   }
+
+  .rate__table-cell-head {
+
+    &--hit::before {
+  top: 7px;
+  left: 8px;
+     }
+  }
+
+  .rate__yes {
+    left: 67px;
+    width: 27px;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  .rate__no {
+    left: 67px;
+    width: 24px;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+.rate__hit {
+
+  &--mobile {
+    display: none;
+  }
+
+  &--tablet {
+    left: 0;
+    display: inline-block;
+  }
+}
 
   .rate__toggles {
     display: none;
@@ -106,11 +291,12 @@
 @media (min-width: $desc) {
   .rate {
     padding-top: 150px;
-    padding-bottom: 95px;
+    padding-bottom: 100px;
   }
 
   .rate__wrapper {
-    width: 940px;
+    margin-left: 5px;
+    width: 942px;
   }
 
   .rate__title {
@@ -126,5 +312,24 @@
   .rate__table-cell {
     padding: 17px 20px;
     font-size: 18px;
+    width: auto;
+
+    &--first-col {
+      width: 189px;
+    }
+  }
+
+  .rate__table-cell-head {
+
+    &--hit::before {
+      top: 10px;
+      left: 5px;
+    }
+  }
+
+  .rate__no,
+  .rate__yes {
+    top: 23px;
+    left: 104px;
   }
 }

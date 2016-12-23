@@ -1,5 +1,5 @@
 .form__desc {
-  padding: 49px 20px 43px;
+  padding: 48px 20px 43px;
   line-height: 2;
   @mixin line;
   @mixin align $cent;
@@ -35,7 +35,7 @@
 }
 
 .form__legend {
-  padding: 40px 27px;
+  padding: 40px 30px;
   @mixin align $cent;
   @mixin upp;
   color: $pink;
@@ -47,17 +47,22 @@
 
   &--progress {
     padding-top: 35px;
-  padding-bottom: 45px;
+  padding-bottom: 41px;
   }
 
   &--os {
     padding-top: 35px;
+  padding-bottom: 36px;
   }
 
   &--textarea {
     padding: 40px 0 17px;
     @mixin bg-color $white;
   }
+}
+
+.form__wrapper-inner {
+  position: relative;
 }
 
 .form__label {
@@ -73,18 +78,18 @@
   }
 
   &--check {
-    padding-bottom: 58px;
+    padding-bottom: 42px;
 
   &:last-of-type {
-    padding-bottom: 50px;
+    padding-bottom: 39px;
   }
 }
 
   &--radio {
-    padding-bottom: 53px;
+    padding-bottom: 35px;
 
     &:last-of-type {
-      padding-bottom: 46px;
+      padding-bottom: 38px;
     }
   }
 }
@@ -96,6 +101,14 @@
   width: 257px;
   border: 2px solid $grey-line;
   font-size: 18px;
+
+  &:hover {
+    border-color: $grey-txt;
+  }
+
+  &:active {
+    border-color: $pink;
+  }
 }
 
 /*Код продублирован, потому что вместе эти 2 свойства не работают*/
@@ -114,13 +127,137 @@ input {
   }
 }
 
+.form__input-right-icon {
+  display: none;
+}
+
 .form__check {
-  margin-right: 55px;
+  margin-right: 26px;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  cursor: pointer;
+  visibility: hidden;
+
+  &::before {
+    position: absolute;
+    left: 19px;
+    content: "";
+    width: 35px;
+    height: 35px;
+    visibility: visible;
+    background-color: $white;
+    border: 2px solid $grey-line;
+   }
+
+  &:hover:before {
+    border-color: $grey-txt;
+  }
+
+  &:active:before {
+    border-color: $pink;
+  }
+}
+
+.form__check-icon {
+  position: absolute;
+  z-index: 4;
+  left: 29px;
+  fill: $pink;
+
+  &:active {
+    visibility: hidden;
+  }
+
+  &--hidden {
+    visibility: hidden;
+  }
+
+
+  &--hidden:active {
+    visibility: visible;
+    z-index: 10;
+  }
+
+
+  &--first {
+    top: 8px;
+  }
+
+  &--second {
+    top: 91px;
+  }
+
+  &--three {
+    top:174px;
+  }
+
+  &--four {
+    top: 255px;
+  }
+
+  &--five {
+    top: 337px;
+  }
+
+  &--six {
+    top: 419px;
+  }
 }
 
 .form__radio {
-  margin-right: 52px;
+  position: relative;
+  margin-right: 26px;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  cursor: pointer;
+  visibility: hidden;
+
+&::before {
+   position: absolute;
+   left: 0;
+   content: "";
+   width: 35px;
+   height: 35px;
+   visibility: visible;
+   background-color: $white;
+   border: 2px solid $grey-line;
+  border-radius: 50%;
+  }
+
+  &:hover:before {
+    border-color: $grey-txt;
+  }
+
+  &:active:before {
+    border-color: $pink;
+  }
+
+  &::after {
+  position: absolute;
+  content: "";
+  @mixin bg-color $pink;
+  border: 8px solid $pink;
+  border-radius: 50%;
+  z-index: 7;
+  left: 11px;
+  top: 11px;
+  visibility: visible;
+  }
+
+  &--first:active:after {
+    visibility: hidden;
+  }
 }
+
+  .form__radio--hidden::after {
+    visibility: hidden;
+  }
+
+.form__radio--hidden:active:after {
+    visibility: visible;
+  }
 
 .form__textarea {
   width: 240px;
@@ -129,6 +266,14 @@ input {
   border: 2px solid $grey-line;
   @mixin font-family $font-regular;
   font-size: 18px;
+
+  &:hover {
+    border-color: $grey-txt;
+  }
+
+  &:active {
+    border-color: $pink;
+  }
 }
 
 /*Код продублирован, потому что вместе эти 2 свойства не работают*/
@@ -156,11 +301,11 @@ textarea {
 
 .form__desc-footer {
   padding: 39px 0 25px;
-  color: $ pink;
+  color: $pink;
   @mixin upp;
 
   &--black {
-    color: $ grey-txt;
+    color: $grey-txt;
   }
 
   &--hidden {
@@ -177,7 +322,7 @@ textarea {
   }
 
   .form__desc {
-    padding: 95px 40px 31px;
+    padding: 94px 40px 34px;
     line-height: 1.7;
     font-size: 18px;
 
@@ -194,16 +339,18 @@ textarea {
     &--name {
       margin-bottom: 0;
       order: 1;
+      border: none;
     }
 
     &--os {
-      margin-top: 3px;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
+      margin-top: 7px;
+      margin-bottom: 19px;
+      padding-bottom: 12px;
       order: 2;
     }
 
     &--check {
+  padding-bottom: 5px;
       display: flex;
       flex-flow: column wrap;
       order: 4;
@@ -219,7 +366,7 @@ textarea {
     }
 
     &--textarea {
-      margin-bottom: 60px;
+      margin-bottom: 63px;
       order: 5;
     }
   }
@@ -229,7 +376,8 @@ textarea {
 
     &--os {
       margin-left: 105px;
-      padding-bottom: 52px;
+  margin-bottom: 7px;
+      padding-bottom: 37px;
     }
 
     &--contacts {
@@ -239,7 +387,7 @@ textarea {
 
     &--progress {
       margin-left: 80px;
-      margin-bottom: 7px;
+      margin-bottom: 3px;
     }
 
     &--hidden {
@@ -248,7 +396,7 @@ textarea {
 
     &--textarea {
       margin-left: 110px;
-      padding: 40px;
+      padding: 38px;
     }
   }
 
@@ -261,7 +409,7 @@ textarea {
     }
 
     &--span-top {
-      margin-right: 13px;
+      margin-right: 18px;
       flex:0 0 auto;
       height: 57px;
     }
@@ -279,13 +427,24 @@ textarea {
 
     &--check,
     &--radio {
-      margin-left: 70px;
+      margin-left: 42px;
       align-items: center;
       text-indent: 0;
     }
 
     &--contacts {
+      position: relative;
       flex-basis: 500px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        right: 2px;
+        top: 2px;
+        width: 64px;
+        height: 61px;
+        @mixin bg-color $grey-line;
+      }
     }
   }
 
@@ -301,12 +460,37 @@ textarea {
     }
   }
 
+  .form__input-right-icon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: inline-block;
+    fill: $pink;
+    width: 19px;
+  }
+
   .form__check {
     margin-right: 35px;
+
+    &::before {
+      left: 57px;
+    }
+  }
+
+  .form__check-icon {
+    left: 66px;
   }
 
   .form__radio {
     margin-right: 33px;
+
+    &::before {
+      left: 14px;
+    }
+
+    &::after {
+      left: 25px;
+    }
   }
 
   .form__textarea {
@@ -324,6 +508,10 @@ textarea {
     order: 6;
     height: 70px;
   }
+
+  .form__desc-footer {
+    padding: 0;
+  }
 }
 
 @media (min-width: $desc) {
@@ -334,7 +522,7 @@ textarea {
   }
 
   .form__desc {
-    padding: 95px 90px 33px;
+    padding: 92px 90px 34px;
 
     &--hidden {
       display: inline-block;
@@ -350,26 +538,27 @@ textarea {
     }
 
     &--os {
-      padding-bottom: 18px;
+      margin-top: 0;
+      padding-bottom: 13px;
     }
 
     &--big {
-      margin-left: 0;
-      margin-top: 5px;
+      margin-top: 8px;
       margin-bottom: 0;
-      padding: 0 20px;
       display: flex;
       flex-wrap: wrap;
-      flex: 0 0 900px;
+      flex: 0 0 99%;
     }
 
     &--check {
       margin-bottom: 19px;
-      padding-bottom: 10px;
+      margin-top: 5px;
+      padding: 0 0 10px;
     }
 
     &--contacts {
-
+      padding: 0;
+      margin-bottom: 17px;
     }
 
     &--textarea {
@@ -382,12 +571,17 @@ textarea {
     flex: 0 0 100%;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    &--progress {
+  flex-direction: column;
+  height: 172px;
+     }
   }
 
     .form__legend {
       &--os {
         margin-left: 24px;
-        padding: 33px 30px;
+        padding: 34px 30px;
       }
 
       &--contacts {
@@ -410,14 +604,18 @@ textarea {
   .form__label {
 
     &--radio {
-      margin-left: 90px;
-      padding: 20px 0 30px;
+      margin-left: 63px;
+      padding: 6px 0 28px;
     }
 
     &--flex-cont {
       margin: 0;
       padding-right: 35px;
       padding-left: 35px;
+    }
+
+    &--span {
+      margin-bottom: 16px;
     }
 
     &--span-top {
@@ -429,12 +627,24 @@ textarea {
       flex-wrap: wrap;
       padding: 0;
       margin: auto;
+     margin-left: 20px;
+
+  &:first-of-type {
+  margin-left: 55px;
+   }
     }
 
     &--check {
-      margin-left: 53px;
-      padding: 17px 0 40px;
-      flex-basis: 247px;
+      margin-left: 15px;
+      padding: 8px 0 33px;
+
+  &:first-of-type {
+  margin-left: 56px;
+   }
+
+   &:nth-of-type(2) {
+  margin-left: 56px;
+    }
     }
   }
 
@@ -454,16 +664,54 @@ textarea {
   }
 
   .form__check {
-    margin-right: 29px;
+    margin-right: 18px;
+
+    &::before {
+      left: inherit;
+      top: inherit;
+    }
+  }
+
+  .form__check-icon {
+
+    &--first {
+      top: 18px;
+    }
+
+    &--second {
+      top: 100px;
+    }
+
+    &--three {
+      top: 18px;
+      left: 385px;
+    }
+
+    &--four {
+      top: 100px;
+      left: 385px;
+    }
+
+    &--five {
+      top: 18px;
+      left: 686px;
+    }
+
+    &--six {
+      top: 100px;
+      left: 686px;
+    }
   }
 
   .form__textarea {
-    padding: 15px 20px;
+    margin-bottom: 39px;
+    padding: 14px 18px;
     width: 775px;
     height: 90px;
   }
 
   .form__desc-footer {
+    margin-left: 8px;
     padding: 0;
     padding-top: 4px;
     width: 960px;

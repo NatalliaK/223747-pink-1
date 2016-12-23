@@ -1,14 +1,49 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .social-link {
-  margin: 0 3px;
-  padding: 12px;
+  position: relative;
+  margin: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
   border: 3px solid $grey-social;
   border-radius: 50%;
+
+  svg {
+    position: absolute;
+    fill: $pink;
+  }
 
   &:hover {
     border-color: $grey-txt;
   }
 
   &:active {
-    border-color: $grey-opacity;
+    border-color: $grey-social;
+
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $desc) {
+  .social-links {
+
+    &--form {
+      margin-top: 24px;
+      height: auto;
+    }
+
+    &--photo {
+      margin-left: 10px;
+    }
   }
 }

@@ -22,6 +22,10 @@
   padding-bottom: 20px;
   @mixin font-family $font-bold;
   font-size: 18px;
+
+  &:last-of-type {
+    padding-bottom: 25px;
+  }
 }
 
 .contact-link {
@@ -41,13 +45,21 @@
 }
 
 .footer-contacts__map {
+  position: relative;
   height: 200px;
   overflow: hidden;
+}
+
+.footer-contacts__map-marker {
+  position: absolute;
+  bottom: 70px;
+  left: 143px;
 }
 
 @media (min-width: $tab) {
   .footer-contacts__wrapper-text {
     padding-top: 58px;
+    padding-bottom: 35px;
   }
 
   .footer-contacts__text {
@@ -66,23 +78,36 @@
     width: 250px;
 
     &:not(:last-of-type) {
-      padding-bottom: 48px;
+      padding-bottom: 47px;
+    }
+
+    &--index {
+
+      &:last-of-type {
+        padding-bottom: 20px;
+      }
     }
   }
 
   .footer-contacts__map {
-    height: 380px;
+    height: 378px;
   }
 
-  .footer-contacts__img {
+  .footer-contacts__img-wrap {
     width: 700px;
     height: auto;
+  }
+
+  .footer-contacts__map-marker {
+    top: 191px;
+    left: 333px;
   }
 }
 
 @media (min-width: $desc) {
   .footer-contacts__wrapper-text {
     padding-top: 80px;
+    padding-bottom: 32px;
   }
 
   .footer-contacts__text {
@@ -93,18 +118,25 @@
   .footer-contacts__map {
     height: 500px;
     overflow: hidden;
-    img {
-      width: 1200px;
-      height: auto;
-    }
+  }
+
+  .footer-contacts__img-wrap {
+    width: 1200px;
+    height: auto;
+  }
+
+  .footer-contacts__map-marker {
+    top: 264px;
+    left: 583px;
   }
 
   .footer-contacts__list {
     margin-top: 8px;
+    margin-right: 10px;
   }
 
   .footer-contacts__item {
-    padding-bottom: 15px;
+    padding-bottom: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -115,10 +147,16 @@
 
     &:nth-of-type(2) {
       order: 3;
+      margin-right: -15px;
     }
 
     &:nth-of-type(3) {
       order: 2;
+      padding-bottom: 0;
+
+      span {
+        padding-bottom: 3px;
+      }
     }
   }
 

@@ -1,11 +1,20 @@
 .popup {
+  position: absolute;
+  z-index: 6;
   padding-bottom: 50px;
   @mixin line;
   @mixin align $cent;
-}
+  box-shadow: 0 3px 10px $black-opacity;
+  @mixin bg-color $white;
 
-.popup--grey {
-  @mixin bg-color $grey-bg;
+  &--failed {
+    top: 1425px;
+  }
+
+  &--grey {
+    bottom: -1702px;
+    @mixin bg-color $grey-bg;
+  }
 }
 
 .popup__title {
@@ -20,17 +29,17 @@
 }
 
 .popup__text {
-  padding: 25px 25px 31px;
+  padding: 28px 25px 31px;
   line-height: 1.7;
   @mixin bg-color $white;
 
   &--failed {
-    padding: 25px 0 28px;
+    padding: 25px 0 39px;
   }
 }
 
 .popup__btn--grey-bg {
-  margin: 51px 20px 0;
+  margin: 48px 20px 0;
   width: 280px;
 }
 
@@ -38,10 +47,20 @@
   .popup {
     margin: 0 auto;
     width: 460px;
+
+    &--failed {
+      top: 902px;
+      left: 154px;
+    }
+
+    &--big {
+      bottom: -1235px;
+      left: 154px;
+    }
   }
 
   .popup__title {
-    padding: 45px 110px 25px;
+    padding: 43px 110px 25px;
     @mixin font-family font-bold;
     font-size: 30px;
     letter-spacing: 0.8px;
@@ -66,7 +85,14 @@
 @media (min-width: $desc) {
   .popup {
 
+    &--failed {
+      top: 824px;
+      left: 372px;
+    }
+
     &--big {
+      bottom: -884px;
+      left: 208px;
       width: 780px;
     }
   }
@@ -74,7 +100,7 @@
   .popup__text {
 
     &--big {
-      padding: 0 170px 35px;
+      padding: 0 170px 38px;
     }
   }
 

@@ -13,6 +13,14 @@
     margin-left: 20px;
     width: 280px;
   }
+
+  &:active {
+    color: $white-opacity;
+  }
+
+  &:disabled {
+    @mixin bg-color $grey-line;
+  }
 }
 
 @media (min-width: $tab) {
