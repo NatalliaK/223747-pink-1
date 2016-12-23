@@ -23,12 +23,12 @@
   fill: $grey-txt;
 
   &:hover {
-  fill: $pink;
-   }
+    fill: $pink;
+  }
 
-   &:active {
-  fill-opacity: 0.3;
-    }
+  &:active {
+    fill-opacity: 0.3;
+  }
 }
 
 .page-footer__social {

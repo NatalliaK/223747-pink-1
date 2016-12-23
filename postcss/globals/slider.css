@@ -7,10 +7,9 @@
   padding: 0 5px;
 
   &--active {
-  width: 5px;
-     height: 5px;
-
-   }
+    width: 5px;
+    height: 5px;
+  }
 }
 
 .slider__input {

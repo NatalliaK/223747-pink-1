@@ -64,9 +64,10 @@
 
 .rate__table-cell-head {
   @mixin align $cent;
+
   &--no-vis {
-     display: none;
-   }
+    display: none;
+  }
 
   &--hit {
     position: relative;
@@ -241,16 +242,16 @@
     text-transform: none;
 
     &--first-col {
-  width: 123px;
-     }
+      width: 123px;
+    }
   }
 
   .rate__table-cell-head {
 
     &--hit::before {
-  top: 7px;
-  left: 8px;
-     }
+      top: 7px;
+      left: 8px;
+    }
   }
 
   .rate__yes {

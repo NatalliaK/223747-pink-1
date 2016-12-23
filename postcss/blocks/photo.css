@@ -39,9 +39,9 @@
     padding-right: 0;
   }
 
-   &--little {
-  margin-bottom: 23px;
-    }
+  &--little {
+    margin-bottom: 23px;
+  }
 }
 
 .photo-owner__panorama {

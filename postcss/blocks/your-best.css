@@ -73,14 +73,14 @@
 }
 
 .your-best__thumb-slider {
-   position: absolute;
-   top: 78px;
-   left:211px;
-   content: "";
-   width: 10px;
-   height: 10px;
-   border: 2px solid $pink;
-   border-radius: 50%;
+  position: absolute;
+  top: 78px;
+  left:211px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid $pink;
+  border-radius: 50%;
 
   &:active {
     @mixin bg-color $pink;
@@ -124,15 +124,15 @@
     border-color: $grey-btn;
     color: $grey-btn;
 
-&:hover {
-   color: $white;
- @mixin bg-color #b5b9be;
- }
+    &:hover {
+      color: $white;
+      @mixin bg-color #b5b9be;
+    }
 
-&:active {
-   color: $white-opacity;
- @mixin bg-color #b5b9be;
- }
+    &:active {
+      color: $white-opacity;
+      @mixin bg-color #b5b9be;
+    }
   }
 }
 
@@ -176,10 +176,10 @@
       margin-bottom: 14px;
     }
 
-     &--contrast {
-  margin-bottom: 5px;
-  margin-left: 5px;
-      }
+    &--contrast {
+      margin-bottom: 5px;
+      margin-left: 5px;
+    }
   }
 
   .your-best__icon-pict {
