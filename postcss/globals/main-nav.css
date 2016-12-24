@@ -5,8 +5,8 @@
   background-color: $black-opacity;
 
   &--opened {
-  background-color: $grey-txt;
-   }
+    background-color: $grey-txt;
+  }
 }
 
 .main-nav__toggle {
