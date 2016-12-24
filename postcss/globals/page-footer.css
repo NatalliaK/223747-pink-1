@@ -46,7 +46,7 @@
   margin-bottom: 8px;
 
   &--photo {
-    margin-bottom: 0;
+    margin-bottom: 6px;
   }
 }
 
@@ -104,14 +104,7 @@
   }
 
   .page-footer__copyright-span {
-
-    &--index {
-      margin-bottom: 0;
-    }
-
-    &--form {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
 
   .page-footer__copyright-link {
@@ -176,7 +169,7 @@
     font-size: 18px;
 
     &--index {
-      margin: 4px 0 0 3px;
+      margin: 4px 4px 0 0;
     }
 
     &--form {

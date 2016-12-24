@@ -77,7 +77,7 @@
     &--last {
       position: relative;
       margin-top: -170px;
-      flex-basis: 620px;
+      flex-basis: 100%;
       overflow: visible;
     }
 

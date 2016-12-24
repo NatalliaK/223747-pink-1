@@ -34,12 +34,12 @@
   color: $pink;
   font-style: normal;
 
-  &:hover {
+  &:hover[href] {
     color: $grey-txt;
     text-decoration: underline;
   }
 
-  &:active {
+  &:active[href] {
     color: $grey-opacity;
   }
 }

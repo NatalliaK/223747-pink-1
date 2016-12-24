@@ -1,19 +1,19 @@
 @font-face {
   font-family: OpenSans;
-  src: url(/fonts/opensans.woff),
+  src: url(../fonts/opensans.woff),
   url(/fonts/opensans.woff2);
 }
 
 @font-face {
   font-family: OpenSans-Bold;
-  src: url(/fonts/opensansbold.woff),
-  url(/fonts/opensansbold.woff2);
+  src: url(../fonts/opensansbold.woff),
+  url(../fonts/opensansbold.woff2);
 }
 
 @font-face {
   font-family: OpenSans-light;
-  src: url(/fonts/opensanslight.woff),
-  url(/fonts/opensanslight.woff2);
+  src: url(../fonts/opensanslight.woff),
+  url(../fonts/opensanslight.woff2);
 }
 
 $font-regular: "OpenSans";

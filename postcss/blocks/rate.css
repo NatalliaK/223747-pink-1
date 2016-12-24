@@ -255,7 +255,7 @@
   }
 
   .rate__yes {
-    left: 67px;
+    left: 65px;
     width: 27px;
 
     &--mobile {
@@ -264,7 +264,7 @@
   }
 
   .rate__no {
-    left: 67px;
+    left: 65px;
     width: 24px;
 
     &--mobile {
@@ -297,7 +297,7 @@
 
   .rate__wrapper {
     margin-left: 5px;
-    width: 942px;
+    width: 935px;
   }
 
   .rate__title {

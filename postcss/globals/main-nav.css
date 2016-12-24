@@ -1,33 +1,39 @@
 .main-nav {
-  background-color: #283645;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  background-color: $black-opacity;
+
+  &--opened {
+  background-color: $grey-txt;
+   }
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 20px;
-  right: 0;
+  top: 21px;
+  right: 20px;
   z-index: 2;
   display: block;
   width: 50px;
   height: 25px;
   font-size: 0;
-  background-color: #283645;
+  background-color: transparent;
   cursor: pointer;
   border: none;
   outline: transparent;
 
   &:hover {
-    top: 0;
-    right: 0;
-    height: 67px;
+    top: 20px;
+    right: 20px;
   }
 }
 
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 2px;
-  right: 19px;
+  top: 0;
+  right: 0;
 
   width: 50px;
   height: 3px;
@@ -38,27 +44,30 @@
 }
 
 .main-nav--closed .main-nav__toggle:hover::before {
-  top: 22px;
+  top: 0;
   background-color: $pink;
   box-shadow: 0 10px 0 0 $pink,
   0 20px 0 0 $pink;
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
-  top: 22px;
-  right: 20px;
+  top: 0;
+  right: 0;
   background-color: $pink-opacity;
   box-shadow: 0 10px 0 0 $pink-opacity,
   0 20px 0 0 $pink-opacity;
 }
 
 .main-nav--opened .main-nav__toggle {
+  top: 18px;
+  right: 18px;
+  width: 25px;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    right: 15px;
+    right: -3px;
     top: 10px;
 
     width: 30px;
@@ -78,14 +87,14 @@
 
   &:hover::before,
   &:hover::after {
-    top: 30px;
-  right: 14px;
+    top: 10px;
+    right: -3px;
     background-color: $pink;
   }
 
   &:active::before,
   &:active::after {
-    top: 30px;
+    top: 10px;
     background-color: $pink-opacity;
   }
 }
@@ -131,21 +140,20 @@
 
 @media (min-width: $tab) {
   .main-nav__toggle {
-    top: 44px;
+    top: 37px;
     right: 40px;
 
     &:hover {
-      top: 0;
-      right: 0;
-      height: 100px;
+      top: 37px;
+      right: 40px;
     }
   }
 
   .main-nav--closed .main-nav__toggle::before {
     content: "";
     position: absolute;
-    top: -9px;
-    right: 0px;
+    top: 0;
+    right: 0;
 
     width: 50px;
     height: 4px;
@@ -156,26 +164,29 @@
   }
 
   .main-nav--closed .main-nav__toggle:hover::before {
-    top: 34px;
-    right: 40px;
+    top: 0;
+    right: 0;
     background-color: $pink;
     box-shadow: 0 10px 0 0 $pink,
     0 20px 0 0 $pink;
   }
 
   .main-nav--closed .main-nav__toggle:active::before {
-    top: 34px;
-    right: 40px;
+    top: 0;
+    right: 0;
     background-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 0 0 rgba(255, 255, 255, 0.3),
     0 20px 0 0 rgba(255, 255, 255, 0.3);
   }
 
   .main-nav--opened .main-nav__toggle {
+    top: 40px;
+    right: 35px;
+
     &::before,
     &::after {
-      top: 6px;
-      right: -8px;
+      top: 10px;
+      right: -3px;
       width: 33px;
       height: 4px;
     }
@@ -191,15 +202,15 @@
 
     &:hover::before,
     &:hover::after {
-      top: 50px;
-      right: 32px;
+      top: 10px;
+      right: -3px;
       background-color: $pink;
     }
 
     &:active::before,
     &:active::after {
-      top: 50px;
-      right: 32px;
+      top: 10px;
+      right: -3px;
       background-color: rgba(255, 255, 255, 0.3);
     }
   }

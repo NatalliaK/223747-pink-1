@@ -8,14 +8,14 @@
     position: relative;
     padding-top: 25px;
     margin-bottom: 30px;
-    width: 700px;
+    flex-basis: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
   .hour-24__pict {
-    width: 239px;
+    width: 241px;
   }
 
   .hour-24__round-24 {
@@ -34,20 +34,19 @@
   .hour-24__right-block {
     flex-basis: 310px;
     flex-grow: 1;
-    margin-left: 60px;
-    margin-top: -15px;
-    padding: 0 10px;
+    margin-left: 69px;
+    margin-top: -13px;
+    padding: 0;
   }
 
   .hour-24__title {
-    padding: 18px 213px 11px 0;
+    padding: 18px 135px 11px 0;
     line-height: 1.2em;
     @mixin font-family $font-bold;
     font-size: 30px;
   }
 
   .hour-24__text {
-    padding-right: 80px;
     padding-bottom: 16px;
     line-height: 1.7em;
   }

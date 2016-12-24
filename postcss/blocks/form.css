@@ -1,7 +1,6 @@
 .form__desc {
   padding: 48px 20px 43px;
   line-height: 2;
-  @mixin line;
   @mixin align $cent;
 
 
@@ -13,7 +12,6 @@
 .form__fieldset {
   @mixin cont;
   padding-bottom: 43px;
-  @mixin line;
   border: none;
 
   &--grey {
@@ -31,11 +29,18 @@
 
   &--check {
     margin-bottom: 38px;
+    display: flex;
+    align-items: center;
+  }
+
+  &--textarea {
+  padding: 0;
+    width: 100%;
   }
 }
 
 .form__legend {
-  padding: 40px 30px;
+  padding: 0 30px;
   @mixin align $cent;
   @mixin upp;
   color: $pink;
@@ -46,17 +51,20 @@
   }
 
   &--progress {
-    padding-top: 35px;
-  padding-bottom: 41px;
+    padding: 35px 34px 39px 40px;
+    width: 246px;
   }
 
   &--os {
     padding-top: 35px;
-  padding-bottom: 36px;
+    padding-bottom: 36px;
+    width: 260px;
   }
 
   &--textarea {
+     margin:0 38px;
     padding: 40px 0 17px;
+    width: 236px;
     @mixin bg-color $white;
   }
 }
@@ -66,10 +74,15 @@
 }
 
 .form__label {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   text-indent: 23px;
   @mixin upp;
   color: $pink;
+
+  &--span-top {
+    display: block;
+  }
 
   &--grey {
     text-transform: none;
@@ -78,7 +91,11 @@
   }
 
   &--check {
+    position: relative;
     padding-bottom: 42px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
 
   &:last-of-type {
     padding-bottom: 39px;
@@ -98,7 +115,7 @@
   margin: 12px 0 23px;
   padding: 18px 0 18px 21px;
   display: block;
-  width: 257px;
+  flex: 1 1 100%;
   border: 2px solid $grey-line;
   font-size: 18px;
 
@@ -132,77 +149,44 @@ input {
 }
 
 .form__check {
-  margin-right: 26px;
+  margin-right: 31px;
+  margin-left: 18px;
   width: 40px;
   height: 40px;
   vertical-align: middle;
   cursor: pointer;
   visibility: hidden;
+}
 
-  &::before {
+  .form__span-check {
     position: absolute;
     left: 19px;
     content: "";
     width: 35px;
     height: 35px;
-    visibility: visible;
     background-color: $white;
     border: 2px solid $grey-line;
-  }
 
-  &:hover:before {
-    border-color: $grey-txt;
-  }
+    &:hover {
+      border-color: $grey-txt;
+    }
 
-  &:active:before {
-    border-color: $pink;
+    &:active {
+      border-color: $pink;
+    }
   }
-}
 
 .form__check-icon {
   position: absolute;
   z-index: 4;
-  left: 29px;
+  top: 8px;
+  left: 8px;
   fill: $pink;
+  visibility: hidden;
+}
 
-  &:active {
-    visibility: hidden;
-  }
-
-  &--hidden {
-    visibility: hidden;
-  }
-
-
-  &--hidden:active {
-    visibility: visible;
-    z-index: 10;
-  }
-
-
-  &--first {
-    top: 8px;
-  }
-
-  &--second {
-    top: 91px;
-  }
-
-  &--three {
-    top:174px;
-  }
-
-  &--four {
-    top: 255px;
-  }
-
-  &--five {
-    top: 337px;
-  }
-
-  &--six {
-    top: 419px;
-  }
+.form__check:checked + span>.form__check-icon {
+  visibility: visible;
 }
 
 .form__radio {
@@ -213,28 +197,33 @@ input {
   vertical-align: middle;
   cursor: pointer;
   visibility: hidden;
+}
 
-  &::before {
-    position: absolute;
-    left: 0;
-    content: "";
-    width: 35px;
-    height: 35px;
-    visibility: visible;
-    background-color: $white;
-    border: 2px solid $grey-line;
-    border-radius: 50%;
-  }
+.form__span-radio {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 35px;
+  height: 35px;
+  visibility: visible;
+  background-color: $white;
+  border: 2px solid $grey-line;
+  border-radius: 50%;
 
-  &:hover:before {
+  &:hover {
     border-color: $grey-txt;
   }
 
-  &:active:before {
+  &:active {
     border-color: $pink;
   }
+}
 
-  &::after {
+.form__span-icon-radio {
+  visibility: hidden;
+}
+
+.form__radio:checked +span >.form__span-icon-radio {
   position: absolute;
   content: "";
   @mixin bg-color $pink;
@@ -246,21 +235,9 @@ input {
   visibility: visible;
   }
 
-  &--first:active:after {
-    visibility: hidden;
-  }
-}
-
-  .form__radio--hidden::after {
-    visibility: hidden;
-  }
-
-.form__radio--hidden:active:after {
-    visibility: visible;
-  }
-
 .form__textarea {
-  width: 240px;
+  margin: 0 20px;
+  width: 236px;
   height: 170px;
   padding: 13px 20px;
   border: 2px solid $grey-line;
@@ -402,7 +379,6 @@ textarea {
 
   .form__label {
     text-indent: 60px;
-    display: flex;
 
     &--flex-cont {
       flex-wrap: wrap;
@@ -457,6 +433,10 @@ textarea {
 
     &--contacts {
       margin: 0 0 13px;
+    }
+
+    &--name {
+      flex: 1 1 auto;
     }
   }
 
